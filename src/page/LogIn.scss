@@ -1,0 +1,10 @@
+@use '../Index' as *;
+
+p {
+    font-family: $open-sans;
+    color: $prudencia;
+}
+h1 {
+    font-family: $laurentian;
+    color: $fortaleza;
+}
