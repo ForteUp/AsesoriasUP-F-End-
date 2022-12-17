@@ -1,0 +1,30 @@
+//* COLOR PALLETTE
+
+$tradicion-light: #BE9A59;
+$tradicion-dark: #B28A52;
+$prudencia: #12326E;
+$fortaleza: #911831;
+$esperanza: #015B4E;
+$pure-withe: #FEFEFE;
+$readable-black: #1B1B1B;
+$pure-black: #000000;
+
+//* TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$open-sans: 'Open sans', sans-serif;
+@import url('//db.onlinewebfonts.com/c/8e2e66945e6410c65a5e5f547dd8fdce?family=Laurentian+Std');
+$laurentian: 'Laurentian Std', sans-serif;
+
+//* BREAKPOINTS
+
+$phone: 375px;
+$bigphone: 640px;
+$tablets: 768px;
+$desktop: 1024px;
+$landscape: 1280px;
+
+//* BASE DESIGN
+
+body {
+    margin: 0;
+}
