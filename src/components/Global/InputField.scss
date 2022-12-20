@@ -1,0 +1,27 @@
+@use '../../Index.scss' as *;
+
+#input-container {
+    height: auto;
+    width: 250px;
+    
+    .text-container {
+        margin: 0;
+        color: $pure-black;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 1vh;
+    }
+
+    input {
+        @include primaryInput;
+        width: 100%;
+        border-radius: $cb5;
+        border: 0;
+        border-bottom: 5px solid $tradicion-light;
+        font-family: $open-sans;
+
+        &:focus {
+            border-bottom: 5px solid $tradicion-dark;
+        }
+    }
+}

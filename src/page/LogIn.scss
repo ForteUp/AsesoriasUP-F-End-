@@ -1,13 +1,5 @@
 @use '../Index' as *;
 
-body {
-    height: 100vh;
-    width: 100vw;
-    background-color: $fortaleza;
-}
-
-
-
 .login-page {
     height: 100vh;
     width: 100vw;    
@@ -22,7 +14,7 @@ body {
         justify-content: space-evenly;
         background-color: $pure-white;
 
-        h1 {
+        .login-title {
             width: 27.5vw;
             margin: 0;
             font-size: calc(3.28125vw);
@@ -31,16 +23,17 @@ body {
             color: $tradicion-dark;
         }
 
-        h2 {
+        .login-subtitle {
             width: auto;
             margin: 0;
             font-size: calc(2.8125vw);
+            // font-size: clamp();
             font-weight: 700;
             text-align: center;
             color: $pure-black;
         }
 
-        p {
+        .login-text {
             width: 25vw;
             margin: 0;
             font-size: calc(1.40625vw);
@@ -48,6 +41,7 @@ body {
             text-align: center;
             color: $dark-gray;
         }
+
     }
 
     .login-container {
@@ -56,8 +50,10 @@ body {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-
+        background-color: $fortaleza;
+        
         img {
+            max-width: 100%;
             max-height: 100%;
             min-height: 100%;
         }
