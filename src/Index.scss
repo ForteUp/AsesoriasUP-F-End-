@@ -1,0 +1,167 @@
+//* COLOR PALLETTE
+
+$tradicion-light: #be9a59;
+$tradicion-dark: #b28a52;
+$prudencia: #12326e;
+$fortaleza: #911831;
+$esperanza: #015b4e;
+$light-gray: #f1f1f1;
+$dark-gray: #909090;
+$pure-white: #fefefe;
+$readable-black: #1b1b1b;
+$pure-black: #000000;
+
+//* TYPOGRAPHY
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+$open-sans: "Open sans", sans-serif;
+
+@font-face {
+    font-family: "Laurentian Std";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    src: url("http://db.onlinewebfonts.com/t/8e2e66945e6410c65a5e5f547dd8fdce.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/8e2e66945e6410c65a5e5f547dd8fdce.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */
+            url("http://db.onlinewebfonts.com/t/8e2e66945e6410c65a5e5f547dd8fdce.woff2")
+            format("woff2"),
+        /* chrome firefox */
+            url("http://db.onlinewebfonts.com/t/8e2e66945e6410c65a5e5f547dd8fdce.woff")
+            format("woff"),
+        /* chrome firefox */
+            url("http://db.onlinewebfonts.com/t/8e2e66945e6410c65a5e5f547dd8fdce.ttf")
+            format("truetype"),
+        /* chrome firefox opera Safari, Android, iOS 4.2+*/
+            url("http://db.onlinewebfonts.com/t/8e2e66945e6410c65a5e5f547dd8fdce.svg#Laurentian Std")
+            format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: "Laurentian Std";
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: 100%;
+    src: url("http://db.onlinewebfonts.com/t/cd76b2186988a4ecf3ce76163d99460a.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/cd76b2186988a4ecf3ce76163d99460a.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */
+            url("http://db.onlinewebfonts.com/t/cd76b2186988a4ecf3ce76163d99460a.woff2")
+            format("woff2"),
+        /* chrome firefox */
+            url("http://db.onlinewebfonts.com/t/cd76b2186988a4ecf3ce76163d99460a.woff")
+            format("woff"),
+        /* chrome firefox */
+            url("http://db.onlinewebfonts.com/t/cd76b2186988a4ecf3ce76163d99460a.ttf")
+            format("truetype"),
+        /* chrome firefox opera Safari, Android, iOS 4.2+*/
+            url("http://db.onlinewebfonts.com/t/cd76b2186988a4ecf3ce76163d99460a.svg#Laurentian Std")
+            format("svg"); /* iOS 4.1- */
+}
+
+$laurentian: "Laurentian Std", sans-serif;
+
+//* BREAKPOINTS
+
+$phone: 375px;
+$bigphone: 640px;
+$tablets: 768px;
+$desktop: 1024px;
+$landscape: 1280px;
+
+//* BASE DESIGN
+
+//? TEXT BASE SIZE
+$h1-size: 72px;
+$h2-size: 48px;
+$h3-size: 32px;
+$p-size: 18px;
+
+//? COMPONENT BORDERS RADIUS
+$cb5: 5px;
+$cb10: 10px;
+$cb15: 15px;
+
+//? BASE PADDING
+$cp20: 20px;
+
+//? BUTTONS BASE DESIGN
+@mixin primaryTradicion {
+    background-color: $tradicion-light;
+    color: $pure-white;
+}
+@mixin primaryFortaleza {
+    background-color: $fortaleza;
+    color: $pure-white;
+}
+@mixin primaryEsperanza {
+    background-color: $esperanza;
+    color: $pure-white;
+}
+@mixin primaryPrudencia {
+    background-color: $prudencia;
+    color: $pure-white;
+}
+@mixin secondaryTradicion {
+    background-color: $pure-white;
+    color: $tradicion-light;
+    border: 5px solid $tradicion-light;
+    border-radius: $c10;
+}
+@mixin secondaryFortaleza {
+    background-color: $pure-white;
+    color: $fortaleza;
+    border: 5px solid $fortaleza;
+    border-radius: $c10;
+}
+@mixin secondaryEsperanza {
+    background-color: $pure-white;
+    color: $esperanza;
+    border: 5px solid $esperanza;
+    border-radius: $c10;
+}
+@mixin secondaryPrudencia {
+    background-color: $pure-white;
+    color: $prudencia;
+    border: 5px solid $prudencia;
+    border-radius: $c10;
+}
+
+//? INPUT BACK
+@mixin primaryInput {
+    margin: 0;
+    padding: $cp20;
+    background-color: $light-gray;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    font-family: $open-sans;
+}
+
+h2 {
+    font-family: $laurentian;
+}
+
+h3 {
+    font-family: $open-sans;
+}
+
+p {
+    font-family: $open-sans;
+}
