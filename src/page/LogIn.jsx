@@ -2,6 +2,7 @@ import React from "react";
 import InputField from "../components/Global/InputField";
 import "./LogIn.scss";
 import Tree from "../assets/tree.png";
+import Button from "../components/Global/Button";
 
 function LogIn() {
     return (
@@ -27,10 +28,11 @@ function LogIn() {
                     placeholder=""
                     value="temporal"
                 />
-                
-                <button className="login-button" type="submit">
-                    Ingresar Temporal
-                </button>
+                <Button 
+                    className="login-button"
+                    type="submit"
+                    buttonContent="Ingresar"
+                />
             </form>
             <div className="login-container">
                 <img src={Tree} alt="tree" />
