@@ -42,6 +42,14 @@
             color: $dark-gray;
         }
 
+        .login-button {
+            @include primaryTradicion;
+            width: 25%;
+            border: 0;
+            border-radius: $cb5;
+            height: 7.5%;
+            font-size: $p-size;
+        }
     }
 
     .login-container {
