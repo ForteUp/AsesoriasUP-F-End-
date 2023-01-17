@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.scss';
-import LogIn from './page/LogIn';
+import AgendarCita from './page/AgendarCita';
 
 function App() {
     return (
-        <LogIn/>
+        <AgendarCita/>
     );
 }
 
