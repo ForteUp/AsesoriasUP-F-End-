@@ -1,19 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./Profile.scss";
-import Card from '../Card.jsx';
 
 const Profile = (props) => {
-  const [Alumno, setAlumno] = useState();
-
 
   return (
-    <div className='ProfileCard'  onClick={() => setAlumno(props.id)}>
+    <div className='ProfileCard'  onClick={() => {
+      props.estadoPadre(props.id)
+      alert(props.estado)
+      }}>
         <img src={props.img} className="ProfileImg"/>
         <div className='ProfileInfo'>
             <h1 className='ProfileName'>{props.name}</h1>
             <p className='ProfileEmail'>{props.email}</p>
         </div>
-        <Card a={Alumno}/>
     </div>
   )
 }

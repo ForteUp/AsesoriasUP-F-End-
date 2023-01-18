@@ -1,7 +1,6 @@
 import React from "react";
 import "./AgendarCita.scss";
 import Lista_Alumnos from "../components/AgendarCitaPage/Lista_Alumnos.jsx";
-import Card from "../components/AgendarCitaPage/Card.jsx";
 function AgendarCita(){
     return(
         <div className="AgendarCita-page">
