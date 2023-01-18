@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 .ProfileCard{
     height: 75px;
     width: 500px;
@@ -8,9 +10,13 @@
     gap: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    flex: none;
+    flex-grow: 0;
+    order: 0;
 
 
     .ProfileImg{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -19,34 +25,44 @@
         height: 50px;
         background: #921a9c;
         border-radius: 50px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
     }
 
     .ProfileInfo{
         width: 260px;
         height: 48px;
         padding: auto;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
         .ProfileName{
             width: 100%;
             height: 25px;
-            font-family: "Open Sans";
+            font-family: "Open Sans", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
             line-height: 25px;
             margin-bottom: 0px;
             margin-top: 0px;
+            display: flex;
+            align-items: center;
         }
     
         .ProfileEmail{
             width: 132px;
             height: 20px;
             color: #909090;
-            font-family: "Open Sans";
+            font-family: "Open Sans", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 20px;
             margin-top: 3px;
+            display: flex;
+            align-items: center;
         }
     }
 }

@@ -23,19 +23,19 @@ const Profiles = () => {
       img: usuario,
     },
     {
-      id: 3,
+      id: 4,
       name: "Eduardo Daniel Ramírez Prado",
       email: "0000000@up.edu.mx",
       img: usuario,
     },
     {
-      id: 3,
+      id: 5,
       name: "Eduardo Daniel Ramírez Prado",
       email: "0000000@up.edu.mx",
       img: usuario,
     },
     {
-      id: 3,
+      id: 6,
       name: "Eduardo Daniel Ramírez Prado",
       email: "0000000@up.edu.mx",
       img: usuario,
@@ -45,7 +45,7 @@ const Profiles = () => {
     <div className='ProfileList'>
       {profiles.map((profiles) => {
         return(
-          <Profile name={profiles.name} email={profiles.email} img={profiles.img}/>
+          <Profile name={profiles.name} email={profiles.email} img={profiles.img} id={profiles.id}/>
         )
       })}
     </div>

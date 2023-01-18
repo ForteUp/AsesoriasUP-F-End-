@@ -1,7 +1,7 @@
 import React from "react";
 import "./AgendarCita.scss";
 import Profiles from "../components/AgendarCitaPage/Profiles";
-
+import ProfilePadre from "../components/AgendarCitaPage/ProfilePadre";
 function AgendarCita(){
     return(
         <div className="AgendarCita-page">
