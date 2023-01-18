@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 .AgendarCita-page{
     height: 100vh;
     width: 100vw;    
@@ -6,18 +7,20 @@
         margin: auto;
 
         .Agendar-title{
-            text-align: center;
+            width: 300px;
             height: 38px;
-            font-family: "Open Sans";
+            font-family: "Open Sans", sans-serif;
             font-style: normal;
             font-weight: 600;
             font-size: 28px;
+            line-height: 38px;
+            margin: auto;
             margin-bottom: 8px;
         }
 
         .AgendarProfile{
             height: 28px;
-            font-family: "Open Sans";
+            font-family: "Open Sans", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
@@ -34,7 +37,7 @@
             padding: 0px;
             gap: 15px;
             width: 510px;
-            height: 345px;
+            height: 300px;
             margin-top: 0px;
             overflow: auto; 
             overflow: overlay;

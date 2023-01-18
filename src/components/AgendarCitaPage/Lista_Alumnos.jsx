@@ -1,12 +1,17 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import usuario from "../../assets/usuario.svg";
 import Profile from "./Profile/Profile";
 
-const Profiles = () => {
+const Lista_Alumnos = () => {
+  const [Alumnos, setAlumnos] = useState()
+
+  useEffect(() =>{
+      },[Alumnos]
+  )
   const [profiles, setProfiles] = useState([
     {
       id: 1,
-      name: "Eduardo Daniel Ramírez Prado",
+      name: "Miguel Herrera",
       email: "0000000@up.edu.mx",
       img: usuario,
     },
@@ -23,19 +28,19 @@ const Profiles = () => {
       img: usuario,
     },
     {
-      id: 3,
+      id: 4,
       name: "Eduardo Daniel Ramírez Prado",
       email: "0000000@up.edu.mx",
       img: usuario,
     },
     {
-      id: 3,
+      id: 5,
       name: "Eduardo Daniel Ramírez Prado",
       email: "0000000@up.edu.mx",
       img: usuario,
     },
     {
-      id: 3,
+      id: 6,
       name: "Eduardo Daniel Ramírez Prado",
       email: "0000000@up.edu.mx",
       img: usuario,
@@ -45,11 +50,19 @@ const Profiles = () => {
     <div className='ProfileList'>
       {profiles.map((profiles) => {
         return(
-          <Profile name={profiles.name} email={profiles.email} img={profiles.img}/>
+          <Profile
+              name={profiles.name}
+              email={profiles.email}
+              img={profiles.img}
+              id={profiles.id}
+              estadoPadre={Alumnos => setAlumnos(Alumnos)}
+              estado={Alumnos}
+          />
+
         )
       })}
     </div>
   )
 }
 
-export default Profiles
+export default Lista_Alumnos
