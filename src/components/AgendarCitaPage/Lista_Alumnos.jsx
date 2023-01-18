@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import usuario from "../../assets/usuario.svg";
 import Profile from "./Profile/Profile";
 
 const Lista_Alumnos = () => {
   const [Alumnos, setAlumnos] = useState()
+
+  useEffect(() =>{
+      },[Alumnos]
+  )
   const [profiles, setProfiles] = useState([
     {
       id: 1,
@@ -46,7 +50,14 @@ const Lista_Alumnos = () => {
     <div className='ProfileList'>
       {profiles.map((profiles) => {
         return(
-          <Profile name={profiles.name} email={profiles.email} img={profiles.img} id={profiles.id} estadoPadre={Alumnos => setAlumnos(Alumnos)} estado={Alumnos}/>
+          <Profile
+              name={profiles.name}
+              email={profiles.email}
+              img={profiles.img}
+              id={profiles.id}
+              estadoPadre={Alumnos => setAlumnos(Alumnos)}
+              estado={Alumnos}
+          />
 
         )
       })}

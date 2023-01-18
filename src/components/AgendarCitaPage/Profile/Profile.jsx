@@ -1,12 +1,20 @@
 import React from 'react';
 import "./Profile.scss";
+import { useState } from 'react';
 
 const Profile = (props) => {
+  const [ backgroundColor, setBackgroundColor ] = useState('#f44');
+
+  const cambiarColor = () => {
+    setBackgroundColor('#fff')
+
+  };
 
   return (
-    <div className='ProfileCard'  onClick={() => {
+    <div style={{'backgroundColor': backgroundColor}}  className='ProfileCard'
+     onClick={() => {
       props.estadoPadre(props.id)
-      alert(props.estado)
+     cambiarColor()
       }}>
         <img src={props.img} className="ProfileImg"/>
         <div className='ProfileInfo'>
