@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./Profile.scss";
-import ProfilePadre from '../ProfilePadre';
+import Card from '../Card.jsx';
 
 const Profile = (props) => {
   const [Alumno, setAlumno] = useState();
@@ -13,7 +13,7 @@ const Profile = (props) => {
             <h1 className='ProfileName'>{props.name}</h1>
             <p className='ProfileEmail'>{props.email}</p>
         </div>
-        <ProfilePadre a={Alumno}/>
+        <Card a={Alumno}/>
     </div>
   )
 }

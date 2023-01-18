@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import usuario from "../../assets/usuario.svg";
 import Profile from "./Profile/Profile";
 
-const Profiles = () => {
+const Lista_Alumnos = () => {
   const [profiles, setProfiles] = useState([
     {
       id: 1,
-      name: "Eduardo Daniel Ramírez Prado",
+      name: "Miguel Herrera",
       email: "0000000@up.edu.mx",
       img: usuario,
     },
@@ -52,4 +52,4 @@ const Profiles = () => {
   )
 }
 
-export default Profiles
+export default Lista_Alumnos

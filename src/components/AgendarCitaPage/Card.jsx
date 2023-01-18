@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ProfilePadre = (alumno) => {
+const Card = (alumno) => {
    
     return (
         <div>
@@ -10,4 +10,4 @@ const ProfilePadre = (alumno) => {
     )
 }
 
-export default ProfilePadre
+export default Card
