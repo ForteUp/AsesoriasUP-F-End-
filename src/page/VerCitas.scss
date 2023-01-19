@@ -1,0 +1,23 @@
+@use '../Index' as *;
+
+.VerCitas-page {
+  display: flex;
+  background-color: red;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  section {
+      list-style: none;
+      line-height: 2;
+      //font-size: 16px;
+      //font-weight: 800;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 15px;
+  }
+  .VerCitas-page-Container{
+
+  }
+
+  .Vercitas-Card {
+    background-color: white;
+  }
+}
