@@ -4,7 +4,6 @@ import Profile from "./Profile/Profile";
 
 const Lista_Alumnos = () => {
   const [Alumnos, setAlumnos] = useState()
-  const [activa, setActiva] = useState(false)
 
   useEffect(() =>{
       },[Alumnos]
@@ -58,8 +57,6 @@ const Lista_Alumnos = () => {
               id={profiles.id}
               estadoPadre={Alumnos => setAlumnos(Alumnos)}
               estado={Alumnos}
-              activa={activa}
-              setActiva={setActiva}
           />
 
         )
