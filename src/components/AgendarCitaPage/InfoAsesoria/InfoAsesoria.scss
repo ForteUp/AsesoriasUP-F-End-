@@ -1,0 +1,67 @@
+@use '../../../Index' as *;
+
+.info-asesoria {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+
+    .info-asesoria-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .info-asesoria-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        #input-container {
+            width: 100%;
+
+        }
+
+        .date-time {
+            display: flex;
+            gap: 10px;
+            
+            #input-container {
+                width: 50%;
+            }
+        }
+    }
+
+    .info-asesoria-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $cp20 0;
+        
+        .back-button {
+            @include secondaryTradicion;
+            height: 50px;
+            border: 0;
+            border-radius: $cb5;
+            font-size: $p-size;
+            
+            &:hover {
+                @include primaryTradicion;
+            }
+        }
+
+        .next-button {
+            @include primaryTradicion;
+            height: 50px;
+            border: 0;
+            border-radius: $cb5;
+            font-size: $p-size;
+            
+            &:hover {
+                @include secondaryTradicion;
+                border: 0;
+
+            }
+        }
+    }
+}

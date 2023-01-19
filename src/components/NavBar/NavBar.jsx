@@ -15,6 +15,7 @@ function NavBar() {
             <div className='opcionAgendar'>
                 <p className='opcionAgendar-text'>Agendar</p>
             </div>
+
             <div className='opcionVerCitas'>
                 <p className='opcionVerCitas-text'>Ver Citas</p>
             </div>
