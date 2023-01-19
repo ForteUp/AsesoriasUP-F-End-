@@ -1,13 +1,15 @@
 import React from "react";
 
-function VerCitas_Card(){
+function VerCitas_Card(props){
+
     return(
         <div className='Vercitas-Card'>
             {/*Props.Nombre y bla bla*/}
-            <p> Eduardo Daniel Ramirez Prado</p>
-            <p> 00000@up.edu.mx - 1 dia restante</p>
-            <p> Segunda Asesoria del Semestre</p>
-            <p> Forte</p>
+            <p> {props.nombre}</p>
+            <p> {props.correo}</p>
+            <p> {props.fecha}</p>
+            <p> {props.titulo}</p>
+            <p> {props.lugar}</p>
         </div>
     )
 }
