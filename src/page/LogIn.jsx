@@ -1,13 +1,19 @@
-import React from "react";
+import React, {useContext} from "react";
 import InputField from "../components/Global/InputField";
 import "./LogIn.scss";
 import Tree from "../assets/tree.png";
 import Button from "../components/Global/Button";
+import {server_url} from "../../main.js";
+import AuthContext from "../Context/AuthContext.jsx";
 
 function LogIn() {
+    let {loginUser} = useContext(AuthContext)
+    let {user} = useContext(AuthContext)
+    console.log(user)
     return (
         <div className="login-page">
-            <form className="login-form">
+            <form className="login-form" onSubmit={loginUser}>
+            {/*<form className="login-form">*/}
                 <h1 className="login-title">ASESORÍAS UNIVERSITARIAS UP</h1>
                 <h2 className="login-subtitle">Inicia Sesión</h2>
                 <p className="login-text">
@@ -19,14 +25,14 @@ function LogIn() {
                     textDisplay="Correo Institucional"
                     type="mail"
                     placeholder=""
-                    value="temporal@up.edu.mx"
+                    // value="0244198@up.edu.mx"
                 />
                 <InputField
                     className="login-pwd"
                     textDisplay="Contraseña"
                     type="password"
                     placeholder=""
-                    value="temporal"
+                    // value="84079866"
                 />
                 <Button 
                     className="login-button"
