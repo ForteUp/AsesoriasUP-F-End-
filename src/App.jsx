@@ -18,10 +18,8 @@ function App() {
                         <Route
                             path="/agendar"
                             element={
-                                <PrivateAsesorRoute>
                                     <AgendarCita />
-                                </PrivateAsesorRoute>
-                             }
+                            }
                         />
                         <Route path="/login" element={<LogIn />} />
                         <Route path="/citas" element={<VerCitas />} />
