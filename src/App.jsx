@@ -19,7 +19,7 @@ function App() {
                             path="/agendar"
                             element={
                                     <AgendarCita />
-                            }
+                             }
                         />
                         <Route path="/login" element={<LogIn />} />
                         <Route path="/citas" element={<VerCitas />} />

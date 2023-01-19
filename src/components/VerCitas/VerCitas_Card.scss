@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.VerCitas-Card-body{
+    width: 500px;
+    height: 150px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    .PersonInfo-container{
+        width: 312px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+        flex-direction: column;
+
+        .PersonInfo-ProfilePic{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            width: 50px;
+            height: 50px;
+            background: #921A9C;
+            border-radius: 50px;
+
+            .PersonInfo-img{
+                width: 23px;
+                height: 41px;
+                display: flex;
+                align-items: center;
+                flex: none;
+            }
+        }
+
+        .PersonInfo-Name{
+            width: 200px;
+            height: 19px;
+            font-family: "Open Sans",sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+        }
+
+        .PersonInfo-Info{
+            width: 247px;
+            height: 19px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            color: #909090;
+        }
+    }
+
+    .VerCitas-Card-title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 5px;
+        width: 201px;
+        height: 20px;
+
+        .file-pic{
+            width: 20px;
+            height: 20px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+            .file-img{
+                width: 13.33px;
+                height: 16.67px;
+            }
+        }
+
+        .Card-title-text{
+            width: 176px;
+            height: 16px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+    }
+}
