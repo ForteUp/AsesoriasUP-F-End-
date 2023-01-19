@@ -1,7 +1,6 @@
 import React from "react";
 import "./AgendarCita.scss";
-import Profiles from "../components/AgendarCitaPage/Profiles";
-
+import Lista_Alumnos from "../components/AgendarCitaPage/Lista_Alumnos.jsx";
 function AgendarCita(){
     return(
         <div className="AgendarCita-page">
@@ -10,7 +9,7 @@ function AgendarCita(){
                     Agendar Una Asesoría
                 </h1>
                 <h2 className="AgendarProfile">Selecciona con quién vas a tener la asesoría</h2>
-                <Profiles/>
+                <Lista_Alumnos/>
             </div>
         </div>
     )
