@@ -18,9 +18,7 @@ function App() {
                         <Route
                             path="/agendar"
                             element={
-                                <PrivateAsesorRoute>
                                     <AgendarCita />
-                                </PrivateAsesorRoute>
                              }
                         />
                         <Route path="/login" element={<LogIn />} />

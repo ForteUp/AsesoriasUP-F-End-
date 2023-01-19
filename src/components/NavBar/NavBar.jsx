@@ -2,6 +2,7 @@ import React from 'react';
 import "./NavBar.scss";
 import ImgProfile from "../../assets/VectorProfile.svg";
 import ImgLogo from "../../assets/roble-removebg-preview 1roble.png";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -12,12 +13,12 @@ function NavBar() {
             <p className='NavBar-text2'>Universidad</p>
         </div>
         <div className='NavBar-Menu'>
-            <div className='opcionAgendar'>
+            <Link to="/agendar" className='opcionAgendar'>
                 <p className='opcionAgendar-text'>Agendar</p>
-            </div>
-            <div className='opcionVerCitas'>
+            </Link>
+            <Link to="/citas"className='opcionVerCitas'>
                 <p className='opcionVerCitas-text'>Ver Citas</p>
-            </div>
+            </Link>
             <div className='opcionMisEventos'>
                 <p className='opcionMisEventos-text'>Mis Eventos</p>
             </div>
