@@ -3,6 +3,7 @@ import "./VerCitas.scss";
 import NavBar from "../components/NavBar/NavBar";
 import VerCitas_Card from "../components/VerCitas/VerCitas_Card.jsx";
 import usuario from "../assets/usuario.svg";
+import	Calendar from "../assets/VectorCalendar.svg";
 
 function VerCitas() {
     const [data, setData] = useState([
@@ -62,21 +63,26 @@ function VerCitas() {
                 <p className='AsesoriasRealizadas'>Asesorias Realizadas</p>
             </div>
             <div className='AsesoriasAgendadas-container'>
-                <h1 className='AsesoriasAgendadas-title'></h1>
-                <div className='AsesoriasAgendadas-cards'>
-                    {data.map((cita) => {
-                            return (
-                                <VerCitas_Card
-                                img = {cita.img}
-                                nombre = {cita.Nombre}
-                                correo = {`${cita.Matricula}@up.edu.mx`}
-                                fecha = {`${cita.Fecha} ${cita.Hora}`}
-                                titulo = {cita.Titulo}
-                                lugar = {cita.Lugar}
-                                />
-                            )
-                        })}
+              <div className='AsesoriasAgendadas-title'>
+                <div className='calendar-pic'>
+                  <img src={Calendar} className="calendar-img"/>
                 </div>
+                <h1 className='AsesoriasAgendadas-title-text'>Asesorias Agendadas</h1>
+              </div>
+              <div className='AsesoriasAgendadas-cards'>
+                  {data.map((cita) => {
+                          return (
+                              <VerCitas_Card
+                              img = {cita.img}
+                              nombre = {cita.Nombre}
+                              correo = {`${cita.Matricula}@up.edu.mx`}
+                              fecha = {`${cita.Fecha} ${cita.Hora}`}
+                              titulo = {cita.Titulo}
+                              lugar = {cita.Lugar}
+                              />
+                          )
+                      })}
+              </div>
             </div>
         </div>
 

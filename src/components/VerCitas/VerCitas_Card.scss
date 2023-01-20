@@ -3,103 +3,225 @@
 .VerCitas-Card-body{
     width: 500px;
     height: 150px;
-    flex: none;
     order: 0;
+    flex: none;
     flex-grow: 0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
-    .PersonInfo-container{
-        width: 312px;
-        height: 50px;
-        margin-top: 15px;
-        margin-left: 15px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
-        flex-direction: column;
-
-        .PersonInfo-ProfilePic{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0px 0px 0px;
+    
+        .Cardtop-container{
+        display: flex;
+        width: 500px;
+        flex-direction: row;
+        flex: none;
+        flex-grow: 0;
+        gap: 85px;
+        .PersonInfo-container{
+            width: 312px;
+            height: 50px;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex: none;
+    
+            .PersonInfo-ProfilePic{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                width: 50px;
+                height: 50px;
+                background: #921A9C;
+                border-radius: 50px;
+                margin: 0px;
+                flex: none;
+    
+                .PersonInfo-img{
+                    width: 23px;
+                    height: 41px;
+                    display: flex;
+                    align-items: center;
+                    flex: none;
+                }
+            }
+    
+            .PersonInfo-general{
+                padding: 0px;
+                margin-left: 15px;
+                .PersonInfo-Name{
+                    width: 200px;
+                    height: 19px;
+                    font-family: "Open Sans",sans-serif;
+                    font-style: normal;
+                    color: #000000;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 19px;
+                    display: flex;
+                    align-items: center;
+                    margin: 0px;
+                    flex: none;  
+                }
+    
+                .PersonInfo-Info{
+                    width: 247px;
+                    height: 19px;
+                    font-family: "Open Sans", sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    display: flex;
+                    align-items: center;
+                    color: #909090;
+                    margin: 5px 0px 0px 0px;
+                    flex: none;
+                    
+                }
+            }
+        }
+        
+        .OptionIcons{
+            display: flex;
+            flex-direction: row;
             align-items: center;
             padding: 0px;
-            width: 50px;
-            height: 50px;
-            background: #921A9C;
-            border-radius: 50px;
+            gap: 15px;
+            width: 75px;
+            height: 30px;
+            margin-right: 15px;
+            margin-top: 15px;
 
-            .PersonInfo-img{
-                width: 23px;
-                height: 41px;
+            .trash-pic{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+    
+                .trash-img{
+                    width: 20px;
+                    height: 22.5px;
+                }
+            }
+    
+            .update-pic{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+    
+                .update-img{
+                    width: 22.5px;
+                    height: 22.5px;
+                }
+            }
+        }
+    }
+    
+
+    .VerCitas-Info{
+        width: 260px;
+        height: 20px;
+        margin-left: 80px;
+        padding: 0px;
+        flex: 0;
+        display: flex;
+        gap: 6px;
+        margin-top: 18px;
+        .VerCitas-Card-title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 5px;
+            width: 202px;
+            height: 20px;
+            flex: none;
+    
+            .file-pic{
+                width: 20px;
+                height: 20px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+    
+                .file-img{
+                    width: 13.33px;
+                    height: 16.67px;
+                }
+            }
+    
+            .Card-title-text{
+                width: 176px;
+                height: 16px;
+                font-family: "Open Sans", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
                 display: flex;
                 align-items: center;
                 flex: none;
+                order: 1;
+                flex-grow: 0;
             }
         }
 
-        .PersonInfo-Name{
-            width: 200px;
-            height: 19px;
-            font-family: "Open Sans",sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 19px;
-            display: flex;
-            align-items: center;
-        }
-
-        .PersonInfo-Info{
-            width: 247px;
-            height: 19px;
-            font-family: "Open Sans", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 19px;
-            display: flex;
-            align-items: center;
-            color: #909090;
-        }
-    }
-
-    .VerCitas-Card-title{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        gap: 5px;
-        width: 201px;
-        height: 20px;
-
-        .file-pic{
-            width: 20px;
+        .VerCitas-Card-ubi{
+            width: 58px;
             height: 20px;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-
-            .file-img{
-                width: 13.33px;
-                height: 16.67px;
-            }
-        }
-
-        .Card-title-text{
-            width: 176px;
-            height: 16px;
-            font-family: "Open Sans", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
             display: flex;
+            flex-direction: row;
             align-items: center;
+            padding: 0px;
+            gap: 5px;
             flex: none;
-            order: 1;
-            flex-grow: 0;
+
+            .map-pic{
+                width: 20px;
+                height: 20px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .map-img{
+                    width: 11.67px;
+                    height: 16.67px;
+                }
+            }
+
+            .Card-ubi-text{
+                width: 33px;
+                height: 16px;
+                font-family: "Open Sans",sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
         }
     }
 }
