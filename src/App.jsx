@@ -23,7 +23,7 @@ function App() {
                         />
                         <Route path="/login" element={<LogIn />} />
                         <Route path="/citas" element={<VerCitas />} />
-                        <Route path="/testinfoasecompo" element={<InfoAsesoria/>}/>
+                        <Route path="/registrar" element={<InfoAsesoria/>}/>
                 </Routes>
             </AuthProvider>
         </BrowserRouter>

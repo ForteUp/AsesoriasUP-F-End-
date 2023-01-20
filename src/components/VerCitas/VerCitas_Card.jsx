@@ -8,6 +8,30 @@ import Delete from "../../assets/Vectordelete.svg";
 
 function VerCitas_Card(props){
 
+    let icons;
+    if (props.tipo === 'Agendada'){
+        icons = (
+            <>
+                <div className="trash-pic">
+                    <img src={Delete} className="trash-img"/>
+                </div>
+                <div className="update-pic">
+                    <img src={Update} className="update-img"/>
+                </div>
+            </>
+        )
+    }
+    else if (props.tipo === 'Realizada') {
+        icons = (
+                <p> PON REALIZADA DANI</p>
+        )
+    }
+    else {
+        icons = (
+            <p> PON REGISTRADA DANI</p>
+        )
+    }
+
     return(
         <div className='VerCitas-Card-body'>
             <div className="Cardtop-container">
@@ -22,12 +46,7 @@ function VerCitas_Card(props){
             </div>
 
             <div className="OptionIcons">
-                <div className="trash-pic">
-                    <img src={Delete} className="trash-img"/>
-                </div>
-                <div className="update-pic">
-                    <img src={Update} className="update-img"/>
-                </div>
+                {icons}
             </div>
             </div>
             

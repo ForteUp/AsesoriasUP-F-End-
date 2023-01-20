@@ -9,7 +9,7 @@ function InputField(props) {
                 type={props.type}
                 placeholder={props.placeholder}
                 name={props.className}
-                value={props.value}
+                // value={props.value}
             />
         </div>
     );

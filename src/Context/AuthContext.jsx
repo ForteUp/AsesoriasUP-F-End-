@@ -32,7 +32,7 @@ export const AuthProvider = ({children})=> {
                         setUser(values)
                         console.log(JSON.stringify(values))
                         localStorage.setItem('user', JSON.stringify(values))
-                        // navigate('/')
+                        navigate('/citas')
                     //     setAuthTokens(values)
                     //     setUser(jwtDecode(values.access))
                     //     // console.log(user)
