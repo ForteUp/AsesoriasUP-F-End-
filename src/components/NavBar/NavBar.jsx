@@ -4,6 +4,7 @@ import ImgProfile from "../../assets/VectorProfile.svg";
 import ImgLogo from "../../assets/roble-removebg-preview 1roble.png";
 import { Link } from "react-router-dom";
 
+
 function NavBar() {
   return (
     <nav className='NavBar-body'>
@@ -13,7 +14,7 @@ function NavBar() {
             <p className='NavBar-text2'>Universidad</p>
         </div>
         <div className='NavBar-Menu'>
-            <Link to="/agendar" className='opcionAgendar'>
+            <Link to="/agendar" className='opcionAgendar' inputMode=''>
                 <p className='opcionAgendar-text'>Agendar</p>
             </Link>
             <Link to="/citas"className='opcionVerCitas'>

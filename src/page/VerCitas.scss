@@ -4,19 +4,23 @@
   height: 100vh;
   width: 100vw;
   .VerCitas-container{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b c";
     .MenuOptions-container{
     width: 174px;
     height: 96px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     gap: 15px;
     margin-top: 136px;
-    margin-right: 74px;
     flex: none;
+    order: 0;
+    grid-area: a;
+    justify-self: end;
+    margin-right: 20px;
     .AsesoriasAgendadas{
       width: 168px;
       height: 22px;
@@ -29,8 +33,8 @@
       align-items: center;
       flex: none;
       order: 0;
-      flex-grow: 0;
       margin: 0px;
+      justify-content: center;
     }
 
     .AsesoriasRegistrar{
@@ -74,10 +78,9 @@
     align-items: center;
     padding: 0px;
     flex: none;
-    order: 0;
-    flex-grow: 0;
-    align-self: center;
-
+    grid-area: b;
+    justify-self: center;
+    margin-top: 50px;
     .AsesoriasAgendadas-title{
       display: flex;
       flex-direction: row;
@@ -88,7 +91,7 @@
       height: 25px;
       align-self: flex-start;
       margin-left: 9px;
-      margin-bottom: 17px;
+      margin-bottom: 12px;
 
       .calendar-pic{
         width: 24px;
@@ -129,7 +132,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 5px 0px 0px 0px;
+      padding: 10px 0px 0px 0px;
       gap: 10px;
       width: 520px;
       height: 450px;
