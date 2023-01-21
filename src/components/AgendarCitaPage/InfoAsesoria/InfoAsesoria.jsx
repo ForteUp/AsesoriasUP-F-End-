@@ -3,8 +3,12 @@ import InputField from "../../Global/InputField";
 import Button from "../../Global/Button";
 
 import "./InfoAsesoria.scss";
+import {useLocation} from "react-router-dom";
 
 function InfoAsesoria() {
+    const {state} = useLocation()
+    const {Alumnos} = state;
+    console.log(Alumnos)
     return (
         <div className="info-asesoria">
             <div className="info-asesoria-header">
@@ -20,7 +24,6 @@ function InfoAsesoria() {
                         ]}
                         type="text"
                         placeholder=""
-                        value=""
                     />
                     <div className="date-time">
                         <InputField
@@ -31,7 +34,6 @@ function InfoAsesoria() {
                             ]}
                             type="date"
                             placeholder=""
-                            value=""
                         />
                         <InputField
                             className=""
@@ -41,7 +43,6 @@ function InfoAsesoria() {
                             ]}
                             type="time"
                             placeholder=""
-                            value=""
                         />
                     </div>
                     <InputField
@@ -52,7 +53,6 @@ function InfoAsesoria() {
                         ]}
                         type="text"
                         placeholder=""
-                        value=""
                     />
                 </div>
                 <div className="info-asesoria-buttons">
