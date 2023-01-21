@@ -7,6 +7,7 @@ const Profile = (props) => {
   return (
     <div className="ProfileCard" onClick={() => {
       props.estadoPadre(props.id)
+        // console.log(props.estado)
       }}>
         <img src={props.img} className="ProfileImg"/>
         <div className='ProfileInfo'>
