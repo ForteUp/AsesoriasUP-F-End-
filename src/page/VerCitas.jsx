@@ -52,6 +52,7 @@ function VerCitas() {
           Lugar: "Café",
           img: usuario,
         },
+        
       ]);
   return (
     <div className='VerCitas-page'>

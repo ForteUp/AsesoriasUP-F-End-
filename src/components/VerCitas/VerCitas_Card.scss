@@ -225,3 +225,135 @@
         }
     }
 }
+
+.Card-Registrar-body{
+    width: 500px;
+    height: 80px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+
+    .Cardtop-container{
+        display: flex;
+        width: 500px;
+        flex-direction: row;
+        flex: none;
+        flex-grow: 0;
+        gap: 81px;
+
+        .PersonInfo-container{
+            width: 316px;
+            height: 50px;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            display: flex;
+            flex: none;
+        
+            .PersonInfo-ProfilePic{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                width: 50px;
+                height: 50px;
+                background: #921A9C;
+                border-radius: 50px;
+                margin: 0px;
+                flex: none;
+    
+                .PersonInfo-img{
+                    width: 23px;
+                    height: 41px;
+                    display: flex;
+                    align-items: center;
+                    flex: none;
+                }
+            }
+    
+            .PersonInfo-general{
+                padding: 0px;
+                margin-left: 15px;
+                .PersonInfo-Name{
+                    width: 200px;
+                    height: 19px;
+                    font-family: "Open Sans",sans-serif;
+                    font-style: normal;
+                    color: #000000;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 19px;
+                    display: flex;
+                    align-items: center;
+                    margin: 0px;
+                    flex: none;  
+                }
+    
+                .PersonInfo-Info{
+                    width: 247px;
+                    height: 19px;
+                    font-family: "Open Sans", sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    display: flex;
+                    align-items: center;
+                    color: #909090;
+                    margin: 5px 0px 0px 0px;
+                }
+            }
+        }
+        
+        .OptionIcons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 15px;
+            width: 75px;
+            height: 30px;
+            margin-right: 15px;
+            margin-top: 25px;
+
+            .close-pic{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+    
+                .close-img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+    
+            .check-pic{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+    
+                .check-img{
+                    width: 23.65x;
+                    height: 19.42px;
+                }
+            }
+        }
+    }
+}
