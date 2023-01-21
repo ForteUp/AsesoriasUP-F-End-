@@ -55,7 +55,7 @@ function VerCitas() {
                               nombre = {cita.Alumno.Nombre}
                               // correo = {`${cita.Alumno.Matricula}@up.edu.mx`}
                               correo = {cita.Alumno.Correo}
-                              fecha = {`${cita.Fecha} ${cita.Hora}`}
+                              fecha = {`${cita.Fecha} ${cita.Hora.substring(0,cita.Hora.length-3)}`}
                               titulo = {cita.Titulo}
                               lugar = {cita.Lugar}
                               tipo ={vista}
