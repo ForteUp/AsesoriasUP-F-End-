@@ -8,10 +8,10 @@ import	Calendar from "../assets/VectorCalendar.svg";
 function VerCitas() {
     const [data, setData] = useState([
         {
-          Matricula: 1,
+          Matricula: 1244198,
           Nombre: "Miguel Herrera",
-          Fecha: "18/02/23",
-          Hora: "02:30 am",
+          Fecha: "2023-01-18",
+          Hora: "03:07",
           Titulo: "Segunda Asesoría del Semestre",
           Lugar: "Café",
           img: usuario,

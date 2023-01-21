@@ -96,7 +96,10 @@ function VerCitas_Card(props){
         )
     }
     return(
-        {typeCard}
+        <>
+            {typeCard}
+        </>
+        
     )
 }
 

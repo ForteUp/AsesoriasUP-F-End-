@@ -1,73 +1,67 @@
 import React from "react";
 import InputField from "../../Global/InputField";
-import Button from "../../Global/Button";
-
 import "./InfoAsesoria.scss";
-
+import NavBar from "../../NavBar/NavBar";
+import BotonSiguiente from "../BotonNext/BotonSiguiente";
+import BotonAtras from "../BotonAtras/BotonAtras";
 function InfoAsesoria() {
     return (
-        <div className="info-asesoria">
-            <div className="info-asesoria-header">
-                <p>Ayudanos con más información de la Asesoría</p>
-            </div>
-            <form action="">
-                <div className="info-asesoria-fields">
-                    <InputField
-                        className=""
-                        textDisplay={[
-                            "Título ",
-                            <span className="material-icons">edit</span>,
-                        ]}
-                        type="text"
-                        placeholder=""
-                        value=""
-                    />
-                    <div className="date-time">
-                        <InputField
-                            className=""
-                            textDisplay={[
-                                "Fecha ",
-                                <span class="material-icons">event</span>,
-                            ]}
-                            type="date"
-                            placeholder=""
-                            value=""
-                        />
-                        <InputField
-                            className=""
-                            textDisplay={[
-                                "Hora ",
-                                <span class="material-icons">schedule</span>,
-                            ]}
-                            type="time"
-                            placeholder=""
-                            value=""
-                        />
+        <div className="infoAsesoria-page">
+            <NavBar/>
+            <div className="info-asesoria">
+                <h1 className="Agendar-title">
+                    Agendar Una Asesoría
+                </h1>
+                <p className="info-asesoria-header">Ayudanos con más información de la Asesoría</p>
+                <form action="">
+                    <div className="info-asesoria-fields-container">
+                        <div className="info-asesoria-fields">
+                            <InputField
+                                className=""
+                                textDisplay={[
+                                    <p className="text-info">Título</p>,
+                                    <span className="material-icons">edit</span>,
+                                ]}
+                                type="text"
+                                placeholder=""
+                            />
+                            <div className="date-time">
+                                <InputField
+                                    className=""
+                                    textDisplay={[
+                                        <p className="text-info">Fecha</p>,
+                                        <span class="material-icons">event</span>,
+                                    ]}
+                                    type="date"
+                                    placeholder=""
+                                />
+                                <InputField
+                                    className=""
+                                    textDisplay={[
+                                        <p className="text-info">Hora</p>,
+                                        <span class="material-icons">schedule</span>,
+                                    ]}
+                                    type="time"
+                                    placeholder=""
+                                />
+                            </div>
+                            <InputField
+                                className=""
+                                textDisplay={[
+                                    <p className="text-info">Lugar</p>,
+                                    <span class="material-icons">place</span>,
+                                ]}
+                                type="text"
+                                placeholder=""
+                            />
+                        </div>
                     </div>
-                    <InputField
-                        className=""
-                        textDisplay={[
-                            "Lugar ",
-                            <span class="material-icons">place</span>,
-                        ]}
-                        type="text"
-                        placeholder=""
-                        value=""
-                    />
+                </form>
+                <div className="buttons-container">
+                    <BotonSiguiente/>
+                    <BotonAtras/>
                 </div>
-                <div className="info-asesoria-buttons">
-                    <Button
-                        className="back-button"
-                        type="button"
-                        buttonContent="Atras"
-                    />
-                    <Button
-                        className="next-button"
-                        type="submit"
-                        buttonContent="Siguiente"
-                    />
-                </div>
-            </form>
+            </div>
         </div>
     );
 }

@@ -1,67 +1,171 @@
 @use '../../../Index' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
-.info-asesoria {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-
-    .info-asesoria-header {
-        display: flex;
+.infoAsesoria-page{
+    height: 100vh;
+    width: 100vw;
+    .info-asesoria {
         align-items: center;
         justify-content: center;
-
-    }
-
-    .info-asesoria-fields {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        margin-top: 70px;
 
-        #input-container {
-            width: 100%;
-
-        }
-
-        .date-time {
+        .Agendar-title{
+            align-content: center;
+            width: 300px;
+            height: 38px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 38px;
+            order: 0;
             display: flex;
-            gap: 10px;
-            
-            #input-container {
-                width: 50%;
-            }
-        }
-    }
-
-    .info-asesoria-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: $cp20 0;
-        
-        .back-button {
-            @include secondaryTradicion;
-            height: 50px;
-            border: 0;
-            border-radius: $cb5;
-            font-size: $p-size;
-            
-            &:hover {
-                @include primaryTradicion;
-            }
+            align-items: center;
+            flex: none;
+            flex-grow: 0;
+            margin: 0px;
         }
 
-        .next-button {
-            @include primaryTradicion;
-            height: 50px;
-            border: 0;
-            border-radius: $cb5;
-            font-size: $p-size;
-            
-            &:hover {
-                @include secondaryTradicion;
-                border: 0;
+        .info-asesoria-header {
+            width: 429px;
+            height: 27px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            margin-top: 16px;
+    
+        }
 
+        .info-asesoria-fields-container{
+            width: 510px;
+            height: 254px;
+            .info-asesoria-fields {
+                width: 500px;
+                height: 236px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 37px;
+
+                #input-container{
+                    width: 500px;
+                    height: 54px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 5px;
+                    flex: none;
+                    align-self: stretch;
+                    flex-grow: 0;
+                    order: 0;
+                }
+
+                #input-container input{
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0px 5px;
+                    gap: 10px;
+                    width: 500px;
+                    height: 24px;
+                    background-color: #F5F5F5;
+                    border-bottom: 2px solid #C8A568;
+                    border-radius: 1px;
+                    flex: none;
+                    order: 1;
+                    align-self: stretch;
+                    flex-grow: 0;
+                }
+
+                #input-container .text-container{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 5px;
+                    width: 79px;
+                    height: 25px;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                    margin: 0;
+
+                    .text-info{
+                        max-width: 51px;
+                        height: 25px;
+                        font-family: "Open Sans",sans-serif;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 25px;
+                        display: flex;
+                        align-items: center;
+                        color: #12326E;
+                        flex: none;
+                        order: 0;
+                        flex-grow: 0;
+                    }
+
+                    .material-icons{
+                        color: #12326E;
+                        flex: none;
+                        order: 1;
+                        flex-grow: 0;
+                    }
+                }
+                
+                
+                .date-time {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 15px;
+                    width: 500px;
+                    height: 54px;
+                    flex: none;
+                    align-self: stretch;
+                    flex-grow: 0;
+                    
+                    #input-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0px;
+                        gap: 5px;
+                        width: 242.5px;
+                        height: 54px;
+                        flex: none;
+                        order: 0;
+                        flex-grow: 1;
+
+                        input{
+                            width: 242.5px;
+                            height: 24px;
+                        }
+                    }
+                }
             }
+        }
+
+        .buttons-container{
+            width: 510px;
+            align-items: flex-start;
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 10px;
         }
     }
 }
