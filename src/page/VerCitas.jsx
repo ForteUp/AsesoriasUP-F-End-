@@ -9,27 +9,54 @@ import {server_url} from "../../main.js";
 import {useNavigate} from "react-router-dom";
 
 function VerCitas() {
-    const [data, setData] = useState([])
-    const [vista, setVista] = useState('Agendada')
-    let { user } = useContext(AuthContext);
-
-    function getData() {
-    // Send data to the backend via POST
-    fetch(`${server_url}/citas_${user.tipo}/${vista}/${user.id}`, {
-      method: "GET",
-      mode: "cors",
-    })
-      .then((response) => response.json())
-      // .then(data => console.log(data['data']));
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      });
-    }
-
-    useEffect(() => {
-        getData()
-    }, [vista]);
+    const [data, setData] = useState([
+        {
+          Matricula: 1244198,
+          Nombre: "Miguel Herrera",
+          Fecha: "2023-01-18",
+          Hora: "03:07",
+          Titulo: "Segunda Asesoría del Semestre",
+          Lugar: "Café",
+          img: usuario,
+        },
+        {
+          Matricula: 2,
+          Nombre: "Miguel Herrera",
+          Fecha: "18/02/23",
+          Hora: "02:30 am",
+          Titulo: "Segunda Asesoría del Semestre",
+          Lugar: "Café",
+          img: usuario,
+        },
+        {
+            Matricula: 3,
+            Nombre: "Miguel Herrera",
+            Fecha: "18/02/23",
+            Hora: "02:30 am",
+            Titulo: "Segunda Asesoría del Semestre",
+            Lugar: "Café",
+            img: usuario,
+        },
+        {
+            Matricula: 4,
+            Nombre: "Miguel Herrera",
+            Fecha: "18/02/23",
+            Hora: "02:30 am",
+            Titulo: "Segunda Asesoría del Semestre",
+            Lugar: "Café",
+            img: usuario,
+        },
+        {
+          Matricula: 5,
+          Nombre: "Miguel Herrera",
+          Fecha: "18/02/23",
+          Hora: "02:30 am",
+          Titulo: "Segunda Asesoría del Semestre",
+          Lugar: "Café",
+          img: usuario,
+        },
+        
+      ]);
 
   return (
     <div className='VerCitas-page'>
