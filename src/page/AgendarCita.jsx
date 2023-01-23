@@ -62,14 +62,14 @@ function AgendarCita(){
     return(
         <div className="AgendarCita-page">
             <NavBar/>
-            <div className="Agendar-container">
+            {/* <div className="Agendar-container">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
                 </h1>
                 <h2 className="AgendarProfile">Selecciona con quién vas a tener la asesoría</h2>
                 <Lista_Alumnos/>
                 <BotonSiguiente/>
-            </div> 
+            </div>  */}
             {/* <div className="AsesoriaApproved">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
@@ -90,7 +90,7 @@ function AgendarCita(){
                 </div>
             </div>  */}
 
-            {/* <div className="AsesoriaDenied">
+            <div className="AsesoriaDenied">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
                 </h1>
@@ -108,29 +108,8 @@ function AgendarCita(){
                     </div>
                     <BotonRegresar/>
                 </div>
-            </div> */}
-                {/*<Lista_Alumnos/>*/}
-                <div className='ProfileList'>
-                  {profiles.map((profiles) => {
-                    return(
-                      <Profile
-                          name={profiles.name}
-                          email={profiles.email}
-                          img={profiles.img}
-                          id={profiles.id}
-                          estadoPadre={Alumnos => setAlumnos(Alumnos)}
-                          estado={Alumnos}
-                      />
-
-                    )
-                  })}
-                </div>
-                {/*<BotonSiguiente/>*/}
-                <div onClick={() => {navigate("/registrar", { state: {Alumnos:Alumnos} })}} className='BotonSiguiente-body'>
-                    <div className='BotonSiguiente-container'>
-                        <p className='BotonSiguiente-text'>Siguiente</p>
-                    </div>
-                </div>
+            </div> 
+              
             </div>
     )
 };
