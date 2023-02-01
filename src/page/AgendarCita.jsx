@@ -62,14 +62,14 @@ function AgendarCita(){
     return(
         <div className="AgendarCita-page">
             <NavBar/>
-            <div className="Agendar-container">
-                <h1 className="Agendar-title">
-                    Agendar Una Asesoría
-                </h1>
-                <h2 className="AgendarProfile">Selecciona con quién vas a tener la asesoría</h2>
-                <Lista_Alumnos/>
-                <BotonSiguiente/>
-            </div> 
+            {/*<div className="Agendar-container">*/}
+            {/*    <h1 className="Agendar-title">*/}
+            {/*        Agendar Una Asesoría*/}
+            {/*    </h1>*/}
+            {/*    <h2 className="AgendarProfile">Selecciona con quién vas a tener la asesoría</h2>*/}
+            {/*    <Lista_Alumnos/>*/}
+            {/*    <BotonSiguiente/>*/}
+            {/*</div> */}
             {/* <div className="AsesoriaApproved">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
@@ -133,6 +133,6 @@ function AgendarCita(){
                 </div>
             </div>
     )
-};
+}
 
 export default AgendarCita;
