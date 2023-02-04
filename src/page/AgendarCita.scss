@@ -49,9 +49,9 @@
 
         .ProfileList::-webkit-scrollbar{
             display: none;
-            width: 10px;
-            height: 10px;
-            background-color: lightblue;
+            width: 6px;
+            height: 8px;
+            background-color: rgba(144, 144, 144, 0.25)
         }
 
         .ProfileList:hover::-webkit-scrollbar{
@@ -59,7 +59,14 @@
         }
         
         .ProfileList::-webkit-scrollbar-thumb{
-            background-color: #09c;
+            background-color: #909090;
+        }
+
+        .Boton-container{
+            display: flex;
+            width: 510px;
+            margin: 0px;
+            justify-content: end;
         }
     }
 

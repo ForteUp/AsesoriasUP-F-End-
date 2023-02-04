@@ -58,8 +58,9 @@ function InfoAsesoria() {
                     </div>
                 </form>
                 <div className="buttons-container">
-                    <BotonSiguiente/>
                     <BotonAtras/>
+                    <BotonSiguiente/>
+                    
                 </div>
             </div>
         </div>
