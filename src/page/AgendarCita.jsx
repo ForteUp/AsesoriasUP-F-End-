@@ -114,6 +114,6 @@ function AgendarCita(){
               
             </div>
     )
-};
+}
 
 export default AgendarCita;
