@@ -12,6 +12,11 @@ function VerCitas() {
     const [data, setData] = useState([])
     const [vista, setVista] = useState('Agendada')
     let { user } = useContext(AuthContext);
+    const [asesoria, setAsesoria] = useState("AsesoriasAgendadas")
+
+    const onOptionChange = e => {
+        setAsesoria(e.target.value)
+    }
 
     function getData() {
     // Send data to the backend via POST
@@ -43,6 +48,7 @@ function VerCitas() {
                   id="asesoriasAgendadas"
                   checked={asesoria === "AsesoriasAgendadas"}
                   onChange={onOptionChange}
+                  onClick={() => setVista('Agendada')}
                 />
                 <span className='AsesoriasAgendadas'>Asesorias Agendadas</span>
               </label>
@@ -54,6 +60,7 @@ function VerCitas() {
                   id="asesoriasRegistrar"
                   checked={asesoria === "AsesoriasRegistrar"}
                   onChange={onOptionChange}
+                  onClick={() => setVista('Registrada')}
                 />
                 <span className='AsesoriasRegistrar'>Asesorias por Registrar</span>
               </label>
@@ -65,6 +72,7 @@ function VerCitas() {
                   id="asesoriasRealizadas"
                   checked={asesoria === "AsesoriasRealizadas"}
                   onChange={onOptionChange}
+                  onClick={() => setVista('Realizada')}
                 />
                 <span className='AsesoriasRealizadas'>Asesorias Realizadas</span>
               </label>
@@ -87,6 +95,7 @@ function VerCitas() {
                               fecha = {`${cita.Fecha} ${cita.Hora.substring(0,cita.Hora.length-3)}`}
                               titulo = {cita.Titulo}
                               lugar = {cita.Lugar}
+                              tipo ={vista}
                               />
                           )
                       })}
