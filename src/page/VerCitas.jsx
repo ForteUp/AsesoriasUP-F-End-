@@ -30,15 +30,44 @@ function VerCitas() {
     useEffect(() => {
         getData()
     }, [vista]);
-
   return (
     <div className='VerCitas-page'>
         <NavBar/>
         <div className='VerCitas-container'>
             <div className='MenuOptions-container'>
-                <p className='AsesoriasAgendadas' onClick={() => setVista('Agendada')}>Asesorias Agendadas</p>
-                <p className='AsesoriasRegistrar' onClick={() => setVista('Registrada')}>Asesorias por Registrar</p>
-                <p className='AsesoriasRealizadas' onClick={() => setVista('Realizada')}>Asesorias Realizadas</p>
+              <label htmlFor="asesoriasAgendadas">
+                <input
+                  type="radio"
+                  name="asesoria"
+                  value="AsesoriasAgendadas"
+                  id="asesoriasAgendadas"
+                  checked={asesoria === "AsesoriasAgendadas"}
+                  onChange={onOptionChange}
+                />
+                <span className='AsesoriasAgendadas'>Asesorias Agendadas</span>
+              </label>
+              <label htmlFor="asesoriasRegistrar">
+                <input
+                  type="radio"
+                  name="asesoria"
+                  value="AsesoriasRegistrar"
+                  id="asesoriasRegistrar"
+                  checked={asesoria === "AsesoriasRegistrar"}
+                  onChange={onOptionChange}
+                />
+                <span className='AsesoriasRegistrar'>Asesorias por Registrar</span>
+              </label>
+              <label htmlFor="asesoriasRealizadas">
+                <input
+                  type="radio"
+                  name="asesoria"
+                  value="AsesoriasRealizadas"
+                  id="asesoriasRealizadas"
+                  checked={asesoria === "AsesoriasRealizadas"}
+                  onChange={onOptionChange}
+                />
+                <span className='AsesoriasRealizadas'>Asesorias Realizadas</span>
+              </label>
             </div>
             <div className='AsesoriasAgendadas-container'>
               <div className='AsesoriasAgendadas-title'>
@@ -52,20 +81,18 @@ function VerCitas() {
                           return (
                               <VerCitas_Card
                               img = {cita.img}
-                              nombre = {cita.Alumno.Nombre}
+                              nombre = {cita.Nombre}
                               // correo = {`${cita.Alumno.Matricula}@up.edu.mx`}
-                              correo = {cita.Alumno.Correo}
+                              correo = {cita.Matricula}
                               fecha = {`${cita.Fecha} ${cita.Hora.substring(0,cita.Hora.length-3)}`}
                               titulo = {cita.Titulo}
                               lugar = {cita.Lugar}
-                              tipo ={vista}
                               />
                           )
                       })}
               </div>
             </div>
         </div>
-
     </div>
   )
 }

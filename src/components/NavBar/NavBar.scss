@@ -27,7 +27,6 @@
             height: 75px;
             opacity: 0.75;
             flex: none;
-            order: 0;
             flex-grow: 0;
         }
 
@@ -100,6 +99,17 @@
                 flex: none;
                 order: 0;
                 flex-grow: 0;
+            }
+        }
+
+        .opcionAgendar:hover{
+            background-color: rgba(200, 165, 104, 0.25);
+            .opcionAgendar-text{
+                color: #C8A568;
+                font-weight: 600;
+                font-family: "Open Sans",sans-serif;
+                font-style: normal;
+                font-size: 18px;
             }
         }
         .opcionVerCitas{
