@@ -1,0 +1,69 @@
+@use '../Index' as *;
+
+.login-page {
+    height: 100vh;
+    width: 100vw;    
+    display: flex;
+
+    .login-form {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $pure-white;
+
+        .login-title {
+            width: 27.5vw;
+            margin: 0;
+            font-size: calc(3.28125vw);
+            font-weight: 700;
+            text-align: center;
+            color: $tradicion-dark;
+        }
+
+        .login-subtitle {
+            width: auto;
+            margin: 0;
+            font-size: calc(2.8125vw);
+            // font-size: clamp();
+            font-weight: 700;
+            text-align: center;
+            color: $pure-black;
+        }
+
+        .login-text {
+            width: 25vw;
+            margin: 0;
+            font-size: calc(1.40625vw);
+            font-weight: 700;
+            text-align: center;
+            color: $dark-gray;
+        }
+
+        .login-button {
+            @include primaryTradicion;
+            width: 25%;
+            border: 0;
+            border-radius: $cb5;
+            height: 7.5%;
+            font-size: $p-size;
+        }
+    }
+
+    .login-container {
+        height: 100%;
+        width: 60%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background-color: $fortaleza;
+        
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            min-height: 100%;
+        }
+    }
+}

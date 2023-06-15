@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import "./AgendarCita.scss";
-import Lista_Alumnos from "../components/AgendarCitaPage/Lista_Alumnos.jsx";
-import BotonSiguiente from "../components/AgendarCitaPage/BotonNext/BotonSiguiente";
-import NavBar from "../components/Global/NavBar";
+import Lista_Alumnos from "../Rcomponents/AgendarCitaPage/Lista_Alumnos.jsx";
+import BotonSiguiente from "../Rcomponents/AgendarCitaPage/BotonNext/BotonSiguiente";
+import NavBar from "../Rcomponents/Global/NavBar";
 import Check from "../assets/Vectorapproved.svg";
 import Error from "../assets/close.png";
-import BotonRegresar from "../components/AgendarCitaPage/BotonBack/BotonRegresar";
-import Profile from "../components/AgendarCitaPage/Profile/Profile.jsx";
+import BotonRegresar from "../Rcomponents/AgendarCitaPage/BotonBack/BotonRegresar";
+import Profile from "../Rcomponents/AgendarCitaPage/Profile/Profile.jsx";
 import usuario from "../assets/usuario.svg";
 import {useNavigate} from "react-router-dom";
 

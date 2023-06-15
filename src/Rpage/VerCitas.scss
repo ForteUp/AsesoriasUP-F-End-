@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+$primary-color: #00005c; // Change color here. C'mon, try it! 
+$text-color: mix(#000, $primary-color, 64%);
+
+.VerCitas-page{
+  height: 100vh;
+  width: 100vw;
+  .VerCitas-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b c";
+    .MenuOptions-container{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+    margin-top: 136px;
+    grid-area: a;
+    justify-self: end;
+    margin-right: 20px;
+
+    label {
+      display: flex;
+      cursor: pointer;
+      
+      input {
+        display: none;
+        &:checked + span {
+          font-weight: 700;
+          &:before {
+            display: flex;
+          }
+        }
+      }
+      span {
+        display: flex;
+       
+        &:hover {
+          background-color: mix(#fff, $primary-color, 84%);
+        }
+        &:before {
+          display: none;
+          margin-right: 7px;
+          align-items: center;
+          width: 10px;
+          height: 10px;
+          content: url("../assets/VectorCheckMenu.svg");
+        }
+      }
+    }
+
+    .AsesoriasAgendadas{
+      width: 190px;
+      height: 22px;
+      font-family: "Open Sans",sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      order: 0;
+      margin: 0px;
+    }
+
+    .AsesoriasRegistrar{
+      width: 202px;
+      height: 22px;
+      font-family: "Open Sans",sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      order: 1;
+      margin: 0px;
+    }
+
+    .AsesoriasRealizadas{
+      width: 182px;
+      height: 22px;
+      font-family: "Open Sans",sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      order: 2;
+      flex-grow: 0;
+      margin: 0px;
+    }
+  }
+
+  .AsesoriasAgendadas-container{
+    width: 520px;
+    height: 488px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    grid-area: b;
+    justify-self: center;
+    margin-top: 50px;
+    .AsesoriasAgendadas-title{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 10px;
+      width: 218px;
+      height: 25px;
+      align-self: flex-start;
+      margin-left: 9px;
+      margin-bottom: 12px;
+
+      .calendar-pic{
+        width: 24px;
+        height: 24px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .calendar-img{
+          width: 18px;
+          height: 20px;
+
+        }
+      }
+
+      .AsesoriasAgendadas-title-text{
+        width: 184px;
+        height: 25px;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        margin: 0px;
+      }
+    }
+
+    .AsesoriasAgendadas-cards{
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0px 0px 0px;
+      gap: 10px;
+      width: 520px;
+      height: 450px;
+      margin-top: 0px;
+      overflow: auto; 
+      overflow: overlay;
+      flex: none;
+    }
+
+    .AsesoriasAgendadas-cards::-webkit-scrollbar{
+      display: none;
+      width: 6px;
+      height: 8px;
+      background-color: rgba(144, 144, 144, 0.25)
+    }
+
+    .AsesoriasAgendadas-cards:hover::-webkit-scrollbar{
+        display: initial;
+    }
+
+    .AsesoriasAgendadas-cards::-webkit-scrollbar-thumb{
+        background-color: #909090;
+    }
+    }
+  }
+  
+}

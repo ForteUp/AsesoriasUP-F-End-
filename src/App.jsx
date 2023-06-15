@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './App.scss';
 
-import AgendarCita from './page/AgendarCita';
-import LogIn from './page/LogIn';
+import AgendarCita from './Rpage/AgendarCita';
+import LogIn from './Rpage/LogIn';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateAsesorRoute from "./utils/PrivateAsesorRoute.jsx";
 import {AuthProvider} from "./Context/AuthContext";
-import VerCitas from "./page/VerCitas.jsx";
-import InfoAsesoria from './components/AgendarCitaPage/InfoAsesoria/InfoAsesoria';
+import VerCitas from "./Rpage/VerCitas.jsx";
+import InfoAsesoria from './Rcomponents/AgendarCitaPage/InfoAsesoria/InfoAsesoria';
 
 
 function App() {

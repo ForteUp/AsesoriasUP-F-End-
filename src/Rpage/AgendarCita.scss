@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+.AgendarCita-page{
+    height: 100vh;
+    width: 100vw;
+    .Agendar-container{
+        margin-top: 70px;
+        display: grid;
+        justify-content: center;    
+        .Agendar-title{
+            align-content: center;
+            width: 300px;
+            height: 38px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 38px;
+            margin: auto;
+            margin-bottom: 8px;
+        }
+
+        .AgendarProfile{
+            height: 28px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            margin-bottom: 12px;
+            margin-top: 8px;
+        }
+
+        .ProfileList{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 15px;
+            width: 510px;
+            height: 300px;
+            margin-top: 0px;
+            overflow: auto; 
+            overflow: overlay;
+            margin-bottom: 32px;
+        }
+
+        .ProfileList::-webkit-scrollbar{
+            display: none;
+            width: 6px;
+            height: 8px;
+            background-color: rgba(144, 144, 144, 0.25)
+        }
+
+        .ProfileList:hover::-webkit-scrollbar{
+            display: initial;
+        }
+        
+        .ProfileList::-webkit-scrollbar-thumb{
+            background-color: #909090;
+        }
+
+        .Boton-container{
+            display: flex;
+            width: 510px;
+            margin: 0px;
+            justify-content: end;
+        }
+    }
+
+    .AsesoriaApproved{
+        margin-top: 70px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        .Agendar-title{
+            align-content: center;
+            width: 300px;
+            height: 38px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 38px;
+            margin-bottom: 13px;
+            order: 0;
+            flex: none;
+            flex-grow: 0;
+        }
+
+        .AsesoriaApproved-body{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            order: 1;
+            flex: none;
+            flex-grow: 0;
+            align-items: center;
+            flex-direction: column;
+            .AsesoriaApproved-container{
+                height: 345px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                margin-top: 42px;
+                
+                .title-Approved{
+                    width: 174px;
+                    height: 50px;
+                    font-family: "Open Sans",sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 25px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    flex-direction: column;
+                    color: #015B4E;
+                    margin-top: 31px;
+                    flex: none;
+
+                    .title-Approved1{
+                        margin: 0px;
+                    }
+
+                    .title-Approved2{
+                        margin: 0px;
+                    }
+                }
+
+                .circleApproved{
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 42px 0px 42px 0px;
+                    gap: 10px;
+                    width: 150px;
+                    height: 150px;
+                    border: 5px solid #015B4E;
+                    border-radius: 150px;
+                    margin-top: 52px;
+                    flex: none;
+
+                    .check-pic{
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: none;
+                        order: 0;
+                        flex-grow: 0;
+                        .check-img{
+                            width: 39.42px;
+                            height: 32.38px;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+
+    .AsesoriaDenied{
+        margin-top: 70px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+
+        .Agendar-title{
+            align-content: center;
+            width: 300px;
+            height: 38px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 38px;
+            margin-bottom: 13px;
+            order: 0;
+            flex: none;
+            flex-grow: 0;
+        }
+
+        .AsesoriaDenied-body{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            order: 1;
+            flex: none;
+            flex-grow: 0;
+            align-items: center;
+            flex-direction: column;
+            .AsesoriaDenied-container{
+                height: 345px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                margin-top: 42px;
+                
+                .title-Denied{
+                    width: 202px;
+                    height: 50px;
+                    font-family: "Open Sans",sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 25px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    flex-direction: column;
+                    color: #A81313;
+                    margin-top: 31px;
+                    flex: none;
+
+                    .title-Denied1{
+                        margin: 0px;
+                    }
+
+                    .title-Denied2{
+                        margin: 0px;
+                    }
+                }
+
+                .circleDenied{
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 42px 0px 42px 0px;
+                    gap: 10px;
+                    width: 150px;
+                    height: 150px;
+                    border: 5px solid #A81313;
+                    border-radius: 150px;
+                    margin-top: 52px;
+                    flex: none;
+
+                    .check-pic{
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: none;
+                        order: 0;
+                        flex-grow: 0;
+                        .check-img{
+                            width: 34px;
+                            height: 34px;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
