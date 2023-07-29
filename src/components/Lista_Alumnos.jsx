@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import usuario from "../../assets/usuario.svg";
+import usuario from "../assets/usuario.svg";
 import Profile from "./Profile/Profile";
 
 const Lista_Alumnos = () => {

@@ -1,33 +1,33 @@
-import { useState } from 'react';
-import './App.scss';
+import { useState } from "react";
+// import './App.scss';
 
-import AgendarCita from './Rpage/AgendarCita';
-import LogIn from './Rpage/LogIn';
+import AgendarCita from "./page/AgendarCita";
+import LogIn from "./page/LogIn";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateAsesorRoute from "./utils/PrivateAsesorRoute.jsx";
-import {AuthProvider} from "./Context/AuthContext";
-import VerCitas from "./Rpage/VerCitas.jsx";
-import InfoAsesoria from './Rcomponents/AgendarCitaPage/InfoAsesoria/InfoAsesoria';
-
+import { AuthProvider } from "./Context/AuthContext";
+import VerCitas from "./page/VerCitas.jsx";
+import InfoAsesoria from "./page/InfoAsesoria";
+import old_AgendarCita from "./old_page/AgendarCita";
+import old_VerCitas from "./old_page/VerCitas.jsx";
+import old_InfoAsesoria from "./old_components/AgendarCitaPage/InfoAsesoria/InfoAsesoria";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <AuthProvider>
-                <Routes>
-                        <Route
-                            path="/agendar"
-                            element={
-                                    <AgendarCita />
-                             }
-                        />
-                        <Route path="/login" element={<LogIn />} />
-                        <Route path="/citas" element={<VerCitas />} />
-                        <Route path="/registrar" element={<InfoAsesoria/>}/>
-                </Routes>
-            </AuthProvider>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>
+          <Route path="/agendar" element={<AgendarCita />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/citas" element={<VerCitas />} />
+          <Route path="/registrar" element={<InfoAsesoria />} />
+          <Route path="/oldagendar" element={<old_AgendarCita />} />
+          <Route path="/oldcitas" element={<old_VerCitas />} />
+          <Route path="/oldregistrar" element={<old_InfoAsesoria />} />
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
+  );
 }
 
 export default App;

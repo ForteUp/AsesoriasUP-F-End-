@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import "./VerCitas.scss";
-import NavBar from "../components/Global/NavBar";
-import VerCitas_Card from "../components/VerCitas/VerCitas_Card.jsx";
+import NavBar from "../old_components/Global/NavBar";
+import VerCitas_Card from "../old_components/VerCitas/VerCitas_Card.jsx";
 import usuario from "../assets/usuario.svg";
 import	Calendar from "../assets/VectorCalendar.svg";
 import AuthContext from "../Context/AuthContext.jsx";

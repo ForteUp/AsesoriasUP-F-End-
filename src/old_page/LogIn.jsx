@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
-import InputField from "../components/Global/InputField";
+import InputField from "../old_components/Global/InputField";
 import "./LogIn.scss";
 import Tree from "../assets/tree.png";
-import Button from "../components/Global/Button";
+import Button from "../old_components/Global/Button";
 import {server_url} from "../../main.js";
 import AuthContext from "../Context/AuthContext.jsx";
 

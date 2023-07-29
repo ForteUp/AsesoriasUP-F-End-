@@ -1,18 +1,18 @@
 import React from "react";
-import InputField from "../../Global/InputField";
+import InputField from "../components/Global/InputField";
 import "./InfoAsesoria.scss";
-import NavBar from "../../NavBar/NavBar";
-import BotonSiguiente from "../BotonNext/BotonSiguiente";
-import BotonAtras from "../BotonAtras/BotonAtras";
+import NavBar from "../components/Global/NavBar";
+import Button from "../components/Global/Button";
+
 function InfoAsesoria() {
     return (
         <div className="infoAsesoria-page">
-            <NavBar/>
+            <NavBar />
             <div className="info-asesoria">
-                <h1 className="Agendar-title">
-                    Agendar Una Asesoría
-                </h1>
-                <p className="info-asesoria-header">Ayudanos con más información de la Asesoría</p>
+                <h1 className="Agendar-title">Agendar Una Asesoría</h1>
+                <p className="info-asesoria-header">
+                    Ayudanos con más información de la Asesoría
+                </p>
                 <form action="">
                     <div className="info-asesoria-fields-container">
                         <div className="info-asesoria-fields">
@@ -20,7 +20,9 @@ function InfoAsesoria() {
                                 className=""
                                 textDisplay={[
                                     <p className="text-info">Título</p>,
-                                    <span className="material-icons">edit</span>,
+                                    <span className="material-icons">
+                                        edit
+                                    </span>,
                                 ]}
                                 type="text"
                                 placeholder=""
@@ -30,7 +32,9 @@ function InfoAsesoria() {
                                     className=""
                                     textDisplay={[
                                         <p className="text-info">Fecha</p>,
-                                        <span class="material-icons">event</span>,
+                                        <span class="material-icons">
+                                            event
+                                        </span>,
                                     ]}
                                     type="date"
                                     placeholder=""
@@ -39,7 +43,9 @@ function InfoAsesoria() {
                                     className=""
                                     textDisplay={[
                                         <p className="text-info">Hora</p>,
-                                        <span class="material-icons">schedule</span>,
+                                        <span class="material-icons">
+                                            schedule
+                                        </span>,
                                     ]}
                                     type="time"
                                     placeholder=""
@@ -58,9 +64,16 @@ function InfoAsesoria() {
                     </div>
                 </form>
                 <div className="buttons-container">
-                    <BotonAtras/>
-                    <BotonSiguiente/>
-                    
+                    <Button
+                        className="back-button"
+                        type="button"
+                        buttonContent="Atras"
+                    />
+                    <Button
+                        className="next-button"
+                        type="button"
+                        buttonContent="Siguiente"
+                    />
                 </div>
             </div>
         </div>

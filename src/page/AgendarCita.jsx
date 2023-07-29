@@ -1,78 +1,79 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./AgendarCita.scss";
-import Lista_Alumnos from "../components/AgendarCitaPage/Lista_Alumnos.jsx";
-import BotonSiguiente from "../components/AgendarCitaPage/BotonNext/BotonSiguiente";
+import Lista_Alumnos from "../components/Lista_Alumnos.jsx";
 import NavBar from "../components/Global/NavBar";
+import Button from "../components/Global/Button";
 import Check from "../assets/Vectorapproved.svg";
 import Error from "../assets/close.png";
-import BotonRegresar from "../components/AgendarCitaPage/BotonBack/BotonRegresar";
-import Profile from "../components/AgendarCitaPage/Profile/Profile.jsx";
+import Profile from "../components/Profile/Profile.jsx";
 import usuario from "../assets/usuario.svg";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function AgendarCita(){
+function AgendarCita() {
+    const [Alumnos, setAlumnos] = useState();
+    let navigate = useNavigate();
 
+    // useEffect(() =>{
+    //     },[Alumnos]
+    // )
+    const [profiles, setProfiles] = useState([
+        {
+            id: 1,
+            name: "Miguel Herrera",
+            email: "0000000@up.edu.mx",
+            img: usuario,
+        },
+        {
+            id: 2,
+            name: "Eduardo Daniel Ramírez Prado",
+            email: "0000000@up.edu.mx",
+            img: usuario,
+        },
+        {
+            id: 3,
+            name: "Eduardo Daniel Ramírez Prado",
+            email: "0000000@up.edu.mx",
+            img: usuario,
+        },
+        {
+            id: 4,
+            name: "Eduardo Daniel Ramírez Prado",
+            email: "0000000@up.edu.mx",
+            img: usuario,
+        },
+        {
+            id: 5,
+            name: "Eduardo Daniel Ramírez Prado",
+            email: "0000000@up.edu.mx",
+            img: usuario,
+        },
+        {
+            id: 6,
+            name: "Eduardo Daniel Ramírez Prado",
+            email: "0000000@up.edu.mx",
+            img: usuario,
+        },
+    ]);
 
-  const [Alumnos, setAlumnos] = useState()
-    let navigate = useNavigate()
-
-  // useEffect(() =>{
-  //     },[Alumnos]
-  // )
-  const [profiles, setProfiles] = useState([
-    {
-      id: 1,
-      name: "Miguel Herrera",
-      email: "0000000@up.edu.mx",
-      img: usuario,
-    },
-    {
-      id: 2,
-      name: "Eduardo Daniel Ramírez Prado",
-      email: "0000000@up.edu.mx",
-      img: usuario,
-    },
-    {
-      id: 3,
-      name: "Eduardo Daniel Ramírez Prado",
-      email: "0000000@up.edu.mx",
-      img: usuario,
-    },
-    {
-      id: 4,
-      name: "Eduardo Daniel Ramírez Prado",
-      email: "0000000@up.edu.mx",
-      img: usuario,
-    },
-    {
-      id: 5,
-      name: "Eduardo Daniel Ramírez Prado",
-      email: "0000000@up.edu.mx",
-      img: usuario,
-    },
-    {
-      id: 6,
-      name: "Eduardo Daniel Ramírez Prado",
-      email: "0000000@up.edu.mx",
-      img: usuario,
-    },
-  ]);
-
-
-    return(
+    return (
         <div className="AgendarCita-page">
-            <NavBar/>
+            <NavBar />
             <div className="Agendar-container">
-                <h1 className="Agendar-title">
-                    Agendar Una Asesoría
-                </h1>
-                <h2 className="AgendarProfile">Selecciona con quién vas a tener la asesoría</h2>
-                <Lista_Alumnos/>
+                <h1 className="Agendar-title">Agendar Una Asesoría</h1>
+                <h2 className="AgendarProfile">
+                    Selecciona con quién vas a tener la asesoría
+                </h2>
+                <Lista_Alumnos />
                 <div className="Boton-container">
-                  <BotonSiguiente/>
+                    <Button
+                        className="next-button"
+                        type="button"
+                        buttonContent="Siguiente"
+                    />
                 </div>
             </div>
-            {/* <div className="AsesoriaApproved">
+            {/* 
+            <div className="AsesoriaApproved">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
                 </h1>
@@ -88,10 +89,14 @@ function AgendarCita(){
                             </div>
                         </div>
                     </div>
-                    <BotonRegresar/>
+                    <Button
+                        className="back-button"
+                        type="button"
+                        buttonContent="Regresar"
+                    />
                 </div>
             </div>  */}
-{/* 
+            {/* 
             <div className="AsesoriaDenied">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
@@ -108,12 +113,15 @@ function AgendarCita(){
                             </div>
                         </div>
                     </div>
-                    <BotonRegresar/>
+                    <Button
+                        className="back-button"
+                        type="button"
+                        buttonContent="Regresar"
+                    />
                 </div>
             </div>  */}
-              
-            </div>
-    )
+        </div>
+    );
 }
 
 export default AgendarCita;

@@ -1,3 +1,4 @@
+@use '../Index' as *;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 .AgendarCita-page{
@@ -67,6 +68,15 @@
             width: 510px;
             margin: 0px;
             justify-content: end;
+
+            .next-button {
+                @include primaryTradicion;
+                width: 25%;
+                border: 0;
+                border-radius: $cb5;
+                height: 45px;
+                font-size: $p-size;
+            }
         }
     }
 
@@ -165,6 +175,15 @@
                         }
                     }
                 }   
+            }
+            
+            .back-button {
+                @include secondaryTradicion;
+                width: 25%;
+                border: 0;
+                border-radius: $cb5;
+                height: 45px;
+                font-size: $p-size;
             }
         }
     }
@@ -266,6 +285,16 @@
                     }
                 }   
             }
+            
+            .back-button {
+                @include secondaryTradicion;
+                width: 25%;
+                border: 0;
+                border-radius: $cb5;
+                height: 45px;
+                font-size: $p-size;
+            }
         }
+        
     }
 }
