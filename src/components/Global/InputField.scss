@@ -1,6 +1,6 @@
 @use '../../Index.scss' as *;
 
-#input-container {
+.input-container {
     height: auto;
     width: 250px;
     
@@ -9,12 +9,12 @@
         align-items: center;
         margin: 0;
         color: $pure-black;
-        font-size: 14px;
+        font-size: calc(1vw);
         font-weight: 700;
-        margin-bottom: 1vh;
+        margin-bottom: 2.5%;
     }
 
-    input {
+    .input-container {
         @include primaryInput;
         width: 100%;
         padding: 2%;
@@ -22,7 +22,7 @@
         border: 0;
         border-bottom: 5px solid $tradicion-light;
         font-family: $open-sans;
-
+        font-size: calc(1vw);
         &:focus {
             border-bottom: 5px solid $tradicion-dark;
         }

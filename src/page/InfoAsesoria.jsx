@@ -13,56 +13,47 @@ function InfoAsesoria() {
                 <p className="info-asesoria-header">
                     Ayudanos con más información de la Asesoría
                 </p>
-                <form action="">
-                    <div className="info-asesoria-fields-container">
-                        <div className="info-asesoria-fields">
-                            <InputField
-                                className=""
-                                textDisplay={[
-                                    <p className="text-info">Título</p>,
-                                    <span className="material-icons">
-                                        edit
-                                    </span>,
-                                ]}
-                                type="text"
-                                placeholder=""
-                            />
-                            <div className="date-time">
-                                <InputField
-                                    className=""
-                                    textDisplay={[
-                                        <p className="text-info">Fecha</p>,
-                                        <span class="material-icons">
-                                            event
-                                        </span>,
-                                    ]}
-                                    type="date"
-                                    placeholder=""
-                                />
-                                <InputField
-                                    className=""
-                                    textDisplay={[
-                                        <p className="text-info">Hora</p>,
-                                        <span class="material-icons">
-                                            schedule
-                                        </span>,
-                                    ]}
-                                    type="time"
-                                    placeholder=""
-                                />
-                            </div>
-                            <InputField
-                                className=""
-                                textDisplay={[
-                                    <p className="text-info">Lugar</p>,
-                                    <span class="material-icons">place</span>,
-                                ]}
-                                type="text"
-                                placeholder=""
-                            />
-                        </div>
+                <div className="info-asesoria-container">
+                    <InputField
+                        className="info-asesoria-container-title"
+                        textDisplay={[
+                            <p className="text-info">Título</p>,
+                            <span className="material-icons">edit</span>,
+                        ]}
+                        type="text"
+                        placeholder=""
+                    />
+                    <div className="info-asesoria-container-date">
+                        <InputField
+                            className="info-asesoria-container-day"
+                            textDisplay={[
+                                <p className="text-info">Fecha</p>,
+                                <span class="material-icons">event</span>,
+                            ]}
+                            type="date"
+                            placeholder=""
+                        />
+                        <InputField
+                            className="info-asesoria-container-time"
+                            textDisplay={[
+                                <p className="text-info">Hora</p>,
+                                <span class="material-icons">schedule</span>,
+                            ]}
+                            type="time"
+                            placeholder=""
+                        />
                     </div>
-                </form>
+                    <InputField
+                        className="info-asesoria-container-place"
+                        textDisplay={[
+                            <p className="text-info">Lugar</p>,
+                            <span class="material-icons">place</span>,
+                        ]}
+                        type="text"
+                        placeholder=""
+                    />
+                </div>
+
                 <div className="buttons-container">
                     <Button
                         className="back-button"

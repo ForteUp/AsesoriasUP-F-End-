@@ -1,36 +1,35 @@
-import React from 'react';
+import React from "react";
 import "./NavBar.scss";
 import ImgProfile from "../../assets/VectorProfile.svg";
 import ImgLogo from "../../assets/roble-removebg-preview 1roble.png";
 import { Link } from "react-router-dom";
 
-
 function NavBar() {
-  return (
-    <nav className='NavBar-body'>
-        <div className='NavBar-Logo' itemType='button'>
-            <img src={ImgLogo} className="NavBar-Img"/>
-            <p className='NavBar-text1'>Asesorias</p>
-            <p className='NavBar-text2'>Universidad</p>
-        </div>
-        <div className='NavBar-Menu'>
-            <Link to="/agendar" className='opcionAgendar' inputMode=''>
-                <p className='opcionAgendar-text'>Agendar</p>
-            </Link>
-            <Link to="/citas"className='opcionVerCitas'>
-                <p className='opcionVerCitas-text'>Ver Citas</p>
-            </Link>
-            <div className='opcionMisEventos'>
-                <p className='opcionMisEventos-text'>Mis Eventos</p>
+    return (
+        <nav className="navbar">
+            <div className="navbar-header">
+                <img src={ImgLogo} className="navbar-img" />
+                <p className="navbar-title">Asesorias Universitarias</p>
+                <img/>
+                <img/>
             </div>
-            <div className='opcionProfile'>
-                <div className='opcionProfile-account'>
-                    <img src={ImgProfile}  className='opcionProfile-img'/>
-                </div>
+            <div className="navbar-menu">
+                <Link to="/agendar" className="navbar-link" inputMode="">
+                    <a className="navbar-link-text">Agendar</a>
+                </Link>
+                <Link to="/citas" className="navbar-link">
+                    <a className="navbar-link-text">Ver Citas</a>
+                </Link>
+                <Link to="/eventos" className="navbar-link">
+                    <a className="navbar-link-text">Mis Eventos</a>
+                </Link>
+                <Link to="#" className="navbar-link">
+                    <img alt="icon" src={ImgProfile} className="navbar-link-image" />
+                </Link>
+                <a className="navbar-text">Asesorias Universitarias</a>
             </div>
-        </div>
-    </nav>
-  )
+        </nav>
+    );
 }
 
-export default NavBar
+export default NavBar;
