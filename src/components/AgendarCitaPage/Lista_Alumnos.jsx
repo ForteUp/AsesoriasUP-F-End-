@@ -3,11 +3,15 @@ import usuario from "../../assets/usuario.svg";
 import Profile from "./Profile/Profile";
 
 const Lista_Alumnos = () => {
+
+  //El useState se utiliza para el guardado del id del estudiante que se selecciono en la tarjeta
   const [Alumnos, setAlumnos] = useState()
 
   useEffect(() =>{
       },[Alumnos]
   )
+
+  //Esta es la lista que mando en el área de Agendar, son datos que invente para poder terminar el diseño de las tarjetas, ya que no tenía el back
   const [profiles, setProfiles] = useState([
     {
       id: 1,
@@ -47,6 +51,9 @@ const Lista_Alumnos = () => {
     },
   ]);
   return (
+
+    //El ProfileList es el componente que contiene todas las tarjetas de los perfiles de los estudiantes
+    //Este map se encarga de mandar un mapa de todos los perfiles o todos los objetos que se encuentran en la lista de alumnos
     <div className='ProfileList'>
       {profiles.map((profiles) => {
         return(
@@ -57,6 +64,7 @@ const Lista_Alumnos = () => {
               id={profiles.id}
               estadoPadre={Alumnos => setAlumnos(Alumnos)}
               estado={Alumnos}
+              
           />
 
         )
