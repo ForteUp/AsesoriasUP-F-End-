@@ -7,9 +7,8 @@ const Profile = (props) => {
   return (
     <div className="ProfileCard" onClick={() => {
       props.estadoPadre(props.id)
-        // console.log(props.estado)
       }}>
-        <img src={props.img} className="ProfileImg"/>
+        <img src={props.img} className="ProfileImg" alt=''/>
         <div className='ProfileInfo'>
             <h1 className='ProfileName'>{props.name}</h1>
             <p className='ProfileEmail'>{props.email}</p>

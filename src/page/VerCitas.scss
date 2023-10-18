@@ -143,7 +143,8 @@ $text-color: mix(#000, $primary-color, 64%);
       }
 
       .AsesoriasAgendadas-title-text{
-        width: 184px;
+        min-width: 180px;
+        max-width: 201px;
         height: 25px;
         font-family: "Open Sans", sans-serif;
         font-style: normal;

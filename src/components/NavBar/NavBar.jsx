@@ -9,9 +9,8 @@ function NavBar() {
   return (
     <nav className='NavBar-body'>
         <div className='NavBar-Logo' itemType='button'>
-            <img src={ImgLogo} className="NavBar-Img"/>
-            <p className='NavBar-text1'>Asesorias</p>
-            <p className='NavBar-text2'>Universidad</p>
+            <img src={ImgLogo} className="NavBar-Img" alt=''/>
+            <p className='Text'>Asesorias Universitarias</p>
         </div>
         <div className='NavBar-Menu'>
             <Link to="/agendar" className='opcionAgendar' inputMode=''>
@@ -25,10 +24,17 @@ function NavBar() {
             </div>
             <div className='opcionProfile'>
                 <div className='opcionProfile-account'>
-                    <img src={ImgProfile}  className='opcionProfile-img'/>
+                    <img src={ImgProfile}  className='opcionProfile-img' alt=''/>
                 </div>
             </div>
         </div>
+        <label htmlFor="check" className='checkbtn'>
+            <input
+                type="checkbox"
+                id="check"
+            />
+            <span className='AsesoriasRegistrar'>Asesorias por Registrar</span>
+        </label>
     </nav>
   )
 }

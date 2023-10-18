@@ -10,9 +10,20 @@ import {useNavigate} from "react-router-dom";
 
 function VerCitas() {
     const [asesoria, setAsesoria] = useState("AsesoriasAgendadas")
+
+    const title = {
+      AsesoriasAgendadas:"Asesorias Agendadas",
+      AsesoriasRegistrar:"Asesorias por Registrar",
+      AsesoriasRealizadas:"Asesoras Realizadas"
+
+    }
     
     const onOptionChange = e => {
       setAsesoria(e.target.value)
+    }
+
+    const llaves = {
+      "Id":"Matricula"
     }
 
     const [data, setData] = useState([
@@ -24,6 +35,7 @@ function VerCitas() {
           Titulo: "Segunda Asesoría del Semestre",
           Lugar: "Café",
           img: usuario,
+          Tipo: "Agendada",
         },
         {
           Matricula: 2,
@@ -33,6 +45,7 @@ function VerCitas() {
           Titulo: "Segunda Asesoría del Semestre",
           Lugar: "Café",
           img: usuario,
+          Tipo: "Realizada",
         },
         {
             Matricula: 3,
@@ -106,9 +119,9 @@ function VerCitas() {
             <div className='AsesoriasAgendadas-container'>
               <div className='AsesoriasAgendadas-title'>
                 <div className='calendar-pic'>
-                  <img src={Calendar} className="calendar-img"/>
+                  <img src={Calendar} className="calendar-img" alt=''/>
                 </div>
-                <h1 className='AsesoriasAgendadas-title-text'>Asesorias Agendadas</h1>
+                <h1 className='AsesoriasAgendadas-title-text'> {title[asesoria]} </h1>
               </div>
               <div className='AsesoriasAgendadas-cards'>
                   {data.map((cita) => {
@@ -117,10 +130,12 @@ function VerCitas() {
                               img = {cita.img}
                               nombre = {cita.Nombre}
                               // correo = {`${cita.Alumno.Matricula}@up.edu.mx`}
-                              correo = {cita.Matricula}
+                              correo = {`${cita[llaves["Id"]]}@up.edu.mx`}
                               fecha = {`${cita.Fecha} ${cita.Hora.substring(0,cita.Hora.length-3)}`}
                               titulo = {cita.Titulo}
                               lugar = {cita.Lugar}
+                              tipo = {cita.Tipo}
+                              vista = {asesoria}
                               />
                           )
                       })}
