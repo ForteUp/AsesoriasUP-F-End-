@@ -1,227 +1,249 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-@media only screen and (max-width: 480px) {
-    .NavBar-body{
-        .NavBar-Logo{
-            gap: 5px;
-
-            .NavBar-Img{
-                width: 50px;
-                height: 50px;
-            }
-            
-            .Text{
-                height: 25px;
-                font-size: 18px;
-            }
-        }
-    }
-} 
 .NavBar-body{
     width: 100%;
     height: 75px;
     display: flex;
     border-bottom: #C8A568 5px solid;
     justify-content: space-between;
+    align-items: center;
 
     .button{
         background-color: #C8A568;
         width: 25px;
         height: 25px;
     }
+
     .NavBar-Logo{
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        width: 412px;
         height: 75px;
-
-        .NavBar-Img{
-            width: 75px;
-            height: 75px;
+        .img{
             opacity: 0.75;
             flex: none;
         }
 
-        .Text{
-            height: 34px;
+        .text{
             font-family: "Open Sans", sans-serif;
             font-style: normal;
             font-weight: 700;
-            font-size: 25px;
             line-height: normal;
             color: #C8A568;
-            flex: none;
-            word-spacing: 20px;
+            flex: none;  
         }
-
     }
+
+    #check{
+        display: none;
+    }
+
     .NavBar-Menu{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 0px;
-        width: 530px;
-        height: 75px;
         list-style-type: none;
+        flex-shrink: 0;
 
-        
-        .opcionAgendar{
+        .opcion{
             display: flex;
-            flex-direction: row;
+            padding: 25px 20px;
             justify-content: center;
             align-items: center;
-            padding: 25px 20px;
-            width: 114px;
-            height: 75px;
             flex: none;
             order: 0;
             flex-grow: 0;
             text-decoration: none;
             color: #000000;
-            .opcionAgendar-text{
-                width: 74px;
+            height: 75px;
+            .text{
                 height: 25px;
+                min-width: 30px ;
+                max-width: 104px;
                 font-family: "Open Sans",sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
-                line-height: 25px;
+                line-height: normal;
                 display: flex;
                 align-items: center;
                 flex: none;
                 order: 0;
                 flex-grow: 0;
             }
+            .img{
+                width: 20px;
+                height: 20px;
+            }
         }
 
-        .opcionAgendar:hover{
+        .opcion:hover{
             background-color: rgba(200, 165, 104, 0.25);
-            .opcionAgendar-text{
+
+            .text{
                 color: #C8A568;
                 font-weight: 600;
                 font-family: "Open Sans",sans-serif;
                 font-style: normal;
                 font-size: 18px;
             }
-        }
-        .opcionVerCitas{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 25px 20px;
-            width: 116px;
-            height: 75px;
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-            text-decoration: none;
-            color: #000000;
-            .opcionVerCitas-text{
-                width: 76.8px;
-                height: 25px;
-                font-family: "Open Sans", sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 25px;
-                display: flex;
-                align-items: center;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-            }
-        }
-
-        .opcionVerCitas:hover{
-            background-color: rgba(200, 165, 104, 0.25);
-            .opcionVerCitas-text{
-                color: #C8A568;
-                font-weight: 600;
-                font-family: "Open Sans",sans-serif;
-                font-style: normal;
-                font-size: 18px;
-            }
-        }
-
-
-        .opcionMisEventos{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 25px 20px;
-            width: 140px;
-            height: 75px;
-            flex: none;
-            order: 2;
-            flex-grow: 0;
-            .opcionMisEventos-text{
-                width: 104px;
-                height: 25px;
-                font-family: "Open Sans", sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 25px;
-                display: flex;
-                align-items: center;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-            }
-        }
-
-        .opcionMisEventos:hover{
-            background-color: rgba(200, 165, 104, 0.25);
-            .opcionMisEventos-text{
-                color: #C8A568;
-                font-weight: 600;
-                font-family: "Open Sans",sans-serif;
-                font-style: normal;
-                font-size: 18px;
-            }
-        }
-
-        .opcionProfile{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 25px 20px;
-            width: 70px;
-            height: 75px;
-            flex: none;
-            order: 3;
-            flex-grow: 0;
-
-            .opcionProfile-account{
-                display: flex;
-                width: 30px;
-                height: 30px;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-                justify-content: center;
-                align-items: center;
-
-                .opcionProfile-img{
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-        }
-
-        .opcionProfile:hover{
-            background-color: rgba(200, 165, 104, 0.25);
-        }
-
-        .active{
-            background-color: #000000;
         }
     }
 
+    .checkbtn{
+        flex-shrink: 0;
+        cursor: pointer;
+        margin: 20px;
+        width: 35px;
+        height: 35px;
+        
+        .img{
+            width: 35px;
+            height: 35px;
+            flex-shrink: 0;
+        }
+    }
 }
+
+@media only screen and (min-width: 1280px){
+    .NavBar-body{
+        .NavBar-Logo{
+            gap: 20px;
+            width: 412px;
+
+            .img{
+                width: 75px;
+                height: 75px;
+            }
+
+            .text{
+                height: 34px;
+                font-size: 25px;
+                word-spacing: 20px;
+            }
+        }
+
+        .NavBar-Menu{
+            height: 75px;
+            width: 530px;
+            flex-direction: row;
+
+            .opcion{
+                min-width: 70px;
+                max-width: 140px;
+            }
+        }
+
+        .checkbtn{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .NavBar-body{
+        .NavBar-Logo{
+            gap: 20px;
+            width: 412px;
+
+            .img{
+                width: 75px;
+                height: 75px;
+            }
+
+            .text{
+                height: 34px;
+                font-size: 25px;
+                word-spacing: 20px;
+            }
+        }
+
+        .NavBar-Menu{
+            height: 75px;
+            width: 530px;
+            flex-direction: row;
+
+            .opcion{
+                min-width: 70px;
+                max-width: 140px;
+            }
+        }
+
+        .checkbtn{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 481px){
+    .NavBar-body{
+        .NavBar-Logo{
+            gap: 20px;
+            width: 412px;
+
+            .img{
+                width: 75px;
+                height: 75px;
+            }
+
+            .text{
+                height: 34px;
+                font-size: 25px;
+                word-spacing: 20px;
+            }
+        }
+
+        .NavBar-Menu{
+            height: 75px;
+            width: 530px;
+            flex-direction: row;
+
+            .opcion{
+                min-width: 70px;
+                max-width: 140px;
+            }
+        }
+
+        .checkbtn{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .NavBar-body{
+        .NavBar-Logo{
+            gap: 5px;
+            width: 273px;
+            height: 50px;
+
+            .img{
+                width: 50px;
+                height: 50px;
+            }
+            
+            .text{
+                height: 25px;
+                font-size: 18px;
+                word-spacing: 5px;
+            }
+        }
+
+        input {
+            display: none;
+            &:checked + .NavBar-Menu {
+                right: 0;
+                
+            }
+        }
+        .NavBar-Menu{
+            position: fixed;
+            flex-direction: column;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+        }
+        
+    }
+ }

@@ -3,38 +3,40 @@ import "./NavBar.scss";
 import ImgProfile from "../../assets/VectorProfile.svg";
 import ImgLogo from "../../assets/roble-removebg-preview 1roble.png";
 import { Link } from "react-router-dom";
+import ImgMenu from "../../assets/menu.svg";
 
 
 function NavBar() {
   return (
     <nav className='NavBar-body'>
         <div className='NavBar-Logo' itemType='button'>
-            <img src={ImgLogo} className="NavBar-Img" alt=''/>
-            <p className='Text'>Asesorias Universitarias</p>
+            <img src={ImgLogo} className="img" alt=''/>
+            <p className='text'>Asesorias Universitarias</p>
         </div>
+        <input type="checkbox" id="check" value="NavBar-Menu"/>
         <div className='NavBar-Menu'>
-            <Link to="/agendar" className='opcionAgendar' inputMode=''>
-                <p className='opcionAgendar-text'>Agendar</p>
+            <Link to="/agendar" className='opcion' inputMode=''>
+                <p className='text'>Agendar</p>
             </Link>
-            <Link to="/citas"className='opcionVerCitas'>
-                <p className='opcionVerCitas-text'>Ver Citas</p>
+            <Link to="/citas"className='opcion'>
+                <p className='text'>Ver Citas</p>
             </Link>
-            <div className='opcionMisEventos'>
-                <p className='opcionMisEventos-text'>Mis Eventos</p>
+            <div className='opcion'>
+                <p className='text'>Mis Eventos</p>
             </div>
-            <div className='opcionProfile'>
-                <div className='opcionProfile-account'>
-                    <img src={ImgProfile}  className='opcionProfile-img' alt=''/>
-                </div>
+            
+            <div className='opcion'>
+                <img src={ImgProfile}  className='imgProfile' alt=''/>
             </div>
         </div>
+        
         <label htmlFor="check" className='checkbtn'>
-            <input
-                type="checkbox"
-                id="check"
-            />
-            <span className='AsesoriasRegistrar'>Asesorias por Registrar</span>
+                      
+            <img src={ImgMenu}  className='img' alt=''/>
+            
         </label>
+        
+        
     </nav>
   )
 }
