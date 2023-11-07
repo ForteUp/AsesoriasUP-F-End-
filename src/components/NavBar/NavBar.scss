@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
+#check{
+    display: none;
+}
 .NavBar-body{
     width: 100%;
     height: 75px;
@@ -32,10 +35,6 @@
             color: #C8A568;
             flex: none;  
         }
-    }
-
-    #check{
-        display: none;
     }
 
     .NavBar-Menu{
@@ -212,6 +211,12 @@
 }
 
 @media only screen and (max-width: 480px) {
+    input {
+        display: none;
+        &:checked  .NavBar-Menu {
+            right: 0;   
+        }
+    }
     .NavBar-body{
         .NavBar-Logo{
             gap: 5px;
@@ -230,13 +235,7 @@
             }
         }
 
-        input {
-            display: none;
-            &:checked + .NavBar-Menu {
-                right: 0;
-                
-            }
-        }
+        
         .NavBar-Menu{
             position: fixed;
             flex-direction: column;
