@@ -6,7 +6,11 @@ const Profile = (props) => {
 
   return (
     <div className="ProfileCard" onClick={() => {
-      props.estadoPadre(props.id)
+        if(props.estado != null){
+            console.log(`Oye el alumno ${props.estado} fue previamente seleccionado`)
+        }
+        props.estadoPadre(props.id)
+        console.log(props.id)
       }}>
         <img src={props.img} className="ProfileImg" alt=''/>
         <div className='ProfileInfo'>

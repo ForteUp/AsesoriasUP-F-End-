@@ -4,10 +4,9 @@ import "./InfoAsesoria.scss";
 import NavBar from "../../NavBar/NavBar";
 import BotonSiguiente from "../BotonNext/BotonSiguiente";
 import BotonAtras from "../BotonAtras/BotonAtras";
-function InfoAsesoria() {
+function InfoAsesoria(props) {
     return (
         <div className="infoAsesoria-page">
-            <NavBar/>
             <div className="info-asesoria">
                 <h1 className="Agendar-title">
                     Agendar Una Asesoría
@@ -58,9 +57,12 @@ function InfoAsesoria() {
                     </div>
                 </form>
                 <div className="buttons-container">
-                    <BotonAtras/>
+                    <BotonAtras func={()=>{
+                        props.register(false);
+                        props.select(true);
+                        console.log(5)
+                    }}/>
                     <BotonSiguiente/>
-                    
                 </div>
             </div>
         </div>

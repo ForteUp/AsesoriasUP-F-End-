@@ -14,14 +14,8 @@ function App() {
         <BrowserRouter>
             <AuthProvider>
                 <Routes>
-                        <Route
-                            path="/agendar"
-                            element={
-                                    <AgendarCita />
-                             }
-                        />
                         <Route path="/login" element={<LogIn />} />
-                        <Route path="/citas" element={<VerCitas />} />
+                        <Route path="/agendar" element={<AgendarCita />}/>
                         <Route path="/registrar" element={<InfoAsesoria/>}/>
                 </Routes>
             </AuthProvider>
