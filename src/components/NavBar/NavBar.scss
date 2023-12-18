@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-#check{
-    display: none;
-}
 .NavBar-body{
-    width: 100%;
+    width: 100vw;
     height: 75px;
     display: flex;
     border-bottom: #C8A568 5px solid;
@@ -44,65 +41,8 @@
         padding: 0px;
         list-style-type: none;
         flex-shrink: 0;
-
-        .opcion{
-            display: flex;
-            padding: 25px 20px;
-            justify-content: center;
-            align-items: center;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-            text-decoration: none;
-            color: #000000;
-            height: 75px;
-            .text{
-                height: 25px;
-                min-width: 30px ;
-                max-width: 104px;
-                font-family: "Open Sans",sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: normal;
-                display: flex;
-                align-items: center;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-            }
-            .img{
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        .opcion:hover{
-            background-color: rgba(200, 165, 104, 0.25);
-
-            .text{
-                color: #C8A568;
-                font-weight: 600;
-                font-family: "Open Sans",sans-serif;
-                font-style: normal;
-                font-size: 18px;
-            }
-        }
     }
 
-    .checkbtn{
-        flex-shrink: 0;
-        cursor: pointer;
-        margin: 20px;
-        width: 35px;
-        height: 35px;
-        
-        .img{
-            width: 35px;
-            height: 35px;
-            flex-shrink: 0;
-        }
-    }
 }
 
 @media only screen and (min-width: 1280px){
@@ -127,16 +67,7 @@
             height: 75px;
             width: 530px;
             flex-direction: row;
-
-            .opcion{
-                min-width: 70px;
-                max-width: 140px;
-            }
-        }
-
-        .checkbtn{
-            display: none;
-        }
+        }     
     }
 }
 
@@ -162,15 +93,6 @@
             height: 75px;
             width: 530px;
             flex-direction: row;
-
-            .opcion{
-                min-width: 70px;
-                max-width: 140px;
-            }
-        }
-
-        .checkbtn{
-            display: none;
         }
     }
 }
@@ -197,26 +119,11 @@
             height: 75px;
             width: 530px;
             flex-direction: row;
-
-            .opcion{
-                min-width: 70px;
-                max-width: 140px;
-            }
-        }
-
-        .checkbtn{
-            display: none;
         }
     }
 }
 
 @media only screen and (max-width: 480px) {
-    input {
-        display: none;
-        &:checked  .NavBar-Menu {
-            right: 0;   
-        }
-    }
     .NavBar-body{
         .NavBar-Logo{
             gap: 5px;
@@ -233,9 +140,7 @@
                 font-size: 18px;
                 word-spacing: 5px;
             }
-        }
-
-        
+        } 
         .NavBar-Menu{
             position: fixed;
             flex-direction: column;
@@ -243,6 +148,5 @@
             width: 100%;
             height: 100vh;
         }
-        
     }
 }
