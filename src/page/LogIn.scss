@@ -169,6 +169,7 @@
                 display: flex;
                 position: absolute;
                 top: 10vh;
+                transition: opacity 0.5s ease;
             }
             .login-subtitle {
                 font-size: 36px;
