@@ -24,8 +24,7 @@ function LogIn() {
             <form
                 className="login-form"
                 onSubmit={loginUser}
-                onFocus={handleEmailInputFocus}
-                onBlur={handleEmailInputBlur}
+                
             >   
             {/*<form className="login-form">*/}
             <h1 className="login-title">ASESORÍAS Universitarias UP</h1>
@@ -39,6 +38,7 @@ function LogIn() {
                 textDisplay="Correo Institucional"
                 type="mail"
                 placeholder=""
+                onFocus={handleEmailInputFocus}
             />
             <InputField
                 className="login-pwd"
@@ -51,6 +51,12 @@ function LogIn() {
                 className="login-button"
                 type="submit"
                 buttonContent="Ingresar"
+            />
+            <Button 
+                className="login-button-end"
+                type="submit"
+                buttonContent="Regresar"
+                onFocus={handleEmailInputBlur}
             />
             </form>         
             <div className="login-container">

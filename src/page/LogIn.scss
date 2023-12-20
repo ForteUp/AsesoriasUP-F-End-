@@ -87,11 +87,24 @@
 
         .login-button {
             @include primaryTradicion;
-            width: 25%;
+            width: 150px;
             border: 0;
             border-radius: $cb5;
-            height: 7.5%;
+            height: 50px;
             font-size: $p-size;
+        }
+
+        .login-button-end{
+            display: none;
+            width: 150px;
+            border: 0;
+            border-radius: $cb5;
+            height: 50px;
+            color: #909090;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
     }
 
@@ -120,16 +133,26 @@
         &.expanded {
             .login-form {
               height: 100vh !important;
-              transition: height 2s ease;// Use !important to override existing styles if needed
+              border-radius: 0;
+              transition: border-radius 1s ease, height 1s cubic-bezier(0.25, 0.1, 0.25, 8.6);
 
               .login-title{
-                display: none;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+              }
+
+              #input-container.login-pwd  {
+                display: flex;
+                
+            }
+
+              .login-button-end{
+                display: block;
               }
             }
         
             .login-container {
               height: 0vh;
-              transition: height 2s ease;
             }
         }
         .login-form {
@@ -139,7 +162,8 @@
             align-items: center;
             order: 1;
             border-radius: 20px 20px 0px 0px;
-            transition: height 2s ease;
+            transition: height 1s ease;
+ 
 
             .login-title {
                 display: flex;
@@ -155,33 +179,13 @@
                 display: none;
                 
             }
-
-            #input-container.login-mail  {
-                &:focus-within {
-                    + .login-pwd {
-                      display: flex;
-                    }
-
-                }
-                
-            }
-            
-            
-            .login-button {
-                @include primaryTradicion;
-                width: 25%;
-                border: 0;
-                border-radius: $cb5;
-                height: 7.5%;
-                font-size: $p-size;
-            }
         }
     
         .login-container {
             height: 45vh;
             width: 100vw;
             order: 0;
-            transition: height 2s ease;
+            transition: height 1s ease;
             img {
                 max-width: 100%;
                 height: 100%;
@@ -190,3 +194,4 @@
         }
     }
 }
+

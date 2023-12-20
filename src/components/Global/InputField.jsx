@@ -9,7 +9,10 @@ function InputField(props) {
                 type={props.type}
                 placeholder={props.placeholder}
                 name={props.className}
-                // value={props.value}
+                value={props.value}
+                onChange={props.onChange}
+                onFocus={props.onFocus}
+                onBlur={props.onBlur}
             />
         </div>
     );
