@@ -48,6 +48,42 @@
             text-align: center;
             color: $dark-gray;
         }
+        
+        #input-container{
+            height: 75px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 5px;
+            flex: none;
+            flex-grow: 0;
+            order: 0;
+        }
+
+        #input-container input{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px 5px;
+            gap: 10px;
+            width: 350px;
+            height: 50px;
+            background-color: #F1F1F1;
+            border-bottom: 3px solid #C8A568;
+            border-radius: 5px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        #input-container .text-container{
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
 
         .login-button {
             @include primaryTradicion;
@@ -80,6 +116,22 @@
     .login-page {
         background-color: $fortaleza;
         flex-direction: column;
+
+        &.expanded {
+            .login-form {
+              height: 100vh !important;
+              transition: height 2s ease;// Use !important to override existing styles if needed
+
+              .login-title{
+                display: none;
+              }
+            }
+        
+            .login-container {
+              height: 0vh;
+              transition: height 2s ease;
+            }
+        }
         .login-form {
             height: 55vh;
             width: 100vw;
@@ -87,6 +139,7 @@
             align-items: center;
             order: 1;
             border-radius: 20px 20px 0px 0px;
+            transition: height 2s ease;
 
             .login-title {
                 display: flex;
@@ -97,6 +150,23 @@
                 font-size: 36px;
                 font-weight: 700;
             }
+
+            #input-container.login-pwd  {
+                display: none;
+                
+            }
+
+            #input-container.login-mail  {
+                &:focus-within {
+                    + .login-pwd {
+                      display: flex;
+                    }
+
+                }
+                
+            }
+            
+            
             .login-button {
                 @include primaryTradicion;
                 width: 25%;
@@ -111,6 +181,7 @@
             height: 45vh;
             width: 100vw;
             order: 0;
+            transition: height 2s ease;
             img {
                 max-width: 100%;
                 height: 100%;

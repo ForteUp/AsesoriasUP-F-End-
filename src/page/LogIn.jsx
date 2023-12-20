@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import InputField from "../components/Global/InputField";
 import "./LogIn.scss";
 import Tree from "../assets/tree.png";
@@ -7,12 +7,26 @@ import {server_url} from "../../main.js";
 import AuthContext from "../Context/AuthContext.jsx";
 
 function LogIn() {
+    const [expandForm, setExpandForm] = useState(false);
+    const handleEmailInputFocus = () => {
+        setExpandForm(true);
+      };
+    
+      const handleEmailInputBlur = () => {
+        setExpandForm(false);
+      };
     let {loginUser} = useContext(AuthContext)
     let {user} = useContext(AuthContext)
+    
     console.log(user)
     return (
-        <div className="login-page">
-            <form className="login-form" onSubmit={loginUser}>
+        <div className={`login-page ${expandForm ? 'expanded' : ''}`}>
+            <form
+                className="login-form"
+                onSubmit={loginUser}
+                onFocus={handleEmailInputFocus}
+                onBlur={handleEmailInputBlur}
+            >   
             {/*<form className="login-form">*/}
             <h1 className="login-title">ASESORÍAS Universitarias UP</h1>
             <h2 className="login-subtitle">Inicia Sesión</h2>
@@ -25,7 +39,6 @@ function LogIn() {
                 textDisplay="Correo Institucional"
                 type="mail"
                 placeholder=""
-                // value="0244198@up.edu.mx"
             />
             <InputField
                 className="login-pwd"
