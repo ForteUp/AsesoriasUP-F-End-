@@ -71,3 +71,9 @@
     cursor: pointer;
     background-color: rgba(144, 144, 144, 0.25)
 }
+
+@media only screen and (max-width: 480px) {
+    .ProfileCard{
+        max-width: 370px;
+    }
+}

@@ -3,13 +3,17 @@
 .AgendarCita-page{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .Agendar-container{
-        margin-top: 70px;
-        display: grid;
-        justify-content: center;    
+        margin-top: 10vh;
+        max-width: 510px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
         .Agendar-title{
             align-content: center;
-            width: 300px;
             height: 38px;
             font-family: "Open Sans", sans-serif;
             font-style: normal;
@@ -42,14 +46,13 @@
             width: 510px;
             height: 300px;
             margin-top: 0px;
-            overflow: auto; 
             overflow: overlay;
             margin-bottom: 32px;
         }
 
         .ProfileList::-webkit-scrollbar{
             display: none;
-            width: 6px;
+            width: 5px;
             height: 8px;
             background-color: rgba(144, 144, 144, 0.25)
         }
@@ -265,6 +268,21 @@
                         }
                     }
                 }   
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .AgendarCita-page{
+        .Agendar-container{   
+            max-width: 370px;
+            .ProfileList{
+                max-width: 370px;
+            }
+    
+            .Boton-container{
+                max-width: 370px;
             }
         }
     }

@@ -10,10 +10,7 @@ function NavBar() {
         <div className='NavBar-Logo' itemType='button'>
             <img src={ImgLogo} className="img" alt=''/>
             <p className='text'>Asesorias Universitarias</p>
-        </div>
-        
-        <div className='NavBar-Menu'>
-        </div>     
+        </div>  
     </nav>
   )
 }

@@ -89,11 +89,7 @@
             }
         }
 
-        .NavBar-Menu{
-            height: 75px;
-            width: 530px;
-            flex-direction: row;
-        }
+       
     }
 }
 
@@ -117,7 +113,6 @@
 
         .NavBar-Menu{
             height: 75px;
-            width: 530px;
             flex-direction: row;
         }
     }
@@ -141,12 +136,6 @@
                 word-spacing: 5px;
             }
         } 
-        .NavBar-Menu{
-            position: fixed;
-            flex-direction: column;
-            right: -100%;
-            width: 100%;
-            height: 100vh;
-        }
+        
     }
 }
